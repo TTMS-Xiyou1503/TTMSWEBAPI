@@ -48,54 +48,50 @@ namespace TTMSWebAPI
             // Add framework services.
             services.AddMvc();
 
-	        // Adds a default in-memory implementation of IDistributedCache.
-//	        services.AddDistributedMemoryCache();
-	        services.AddDistributedSqlServerCache(options =>
-	        {
-		        options.ConnectionString = Configuration.GetConnectionString("sqlserverCacheConnection");
-		        options.SchemaName = "dbo";
-		        options.TableName = "session";
-		        options.SystemClock = new SystemClock();
-	        });
-	        
-	        // session 设置
-	        services.AddSession(options =>
-	        {
-		        // 设置 Session 过期时间
-		        options.CookieName = ".TTMS.Session";
-		        options.IdleTimeout = TimeSpan.FromDays(15);
-		        options.CookieHttpOnly = false;
-		        options.CookieDomain = ".ksgin.online";
-		        options.CookiePath = "/";
-	        });
-	        
-	        //doc
-	        // Add our repository type
-	        services.AddSingleton<HttpGetAttribute, HttpGetAttribute>();
-
-	        // Register the Swagger generator, defining one or more Swagger documents
-	        services.AddSwaggerGen(c =>
-	        {
-		        c.SwaggerDoc("v1.1", new Info { Title = "TTMS API", Version = "v1.1" });
-	            c.IncludeXmlComments(Path.Combine(PlatformServices.Default.Application.ApplicationBasePath,
-	                "TTMSAPI.XML"));
+            // Adds a default in-memory implementation of IDistributedCache.
+            // services.AddDistributedMemoryCache();
+            services.AddDistributedSqlServerCache(options =>
+            {
+                options.ConnectionString = Configuration.GetConnectionString("sqlserverCacheConnection");
+                options.SchemaName = "dbo";
+                options.TableName = "session";
+                options.SystemClock = new SystemClock();
             });
 
-			// ********************
-			// Setup CORS
-			// ********************
-			var corsBuilder = new CorsPolicyBuilder();
-	        //corsBuilder.WithOrigins("http://localhost:63342" , "http://wwww.ksgin.online");
-			corsBuilder.AllowAnyHeader();
-			corsBuilder.AllowAnyMethod();
-			corsBuilder.AllowAnyOrigin();
-			corsBuilder.AllowCredentials();
+            // session 设置
+            services.AddSession(options =>
+            {
+                // 设置 Session 过期时间
+                options.IdleTimeout = TimeSpan.FromDays(15);
+                options.Cookie.Name = ".TTMS.Session";
+                options.Cookie.HttpOnly = false;
+                options.Cookie.Domain = ".ksgin.online";
+                options.Cookie.Path = "/";
+            });
 
-			services.AddCors(options =>
-			{
-				options.AddPolicy("mCors", corsBuilder.Build());
-			});
+            //doc
+            // Add our repository type
+            services.AddSingleton<HttpGetAttribute, HttpGetAttribute>();
 
+            // Register the Swagger generator, defining one or more Swagger documents
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1.1", new Info {Title = "TTMS API", Version = "v1.1"});
+                c.IncludeXmlComments(Path.Combine(PlatformServices.Default.Application.ApplicationBasePath,
+                    "TTMSAPI.XML"));
+            });
+
+            // ********************
+            // Setup CORS
+            // ********************
+            var corsBuilder = new CorsPolicyBuilder();
+            //corsBuilder.WithOrigins("http://localhost:63342" , "http://wwww.ksgin.online");
+            corsBuilder.AllowAnyHeader();
+            corsBuilder.AllowAnyMethod();
+            corsBuilder.AllowAnyOrigin();
+            corsBuilder.AllowCredentials();
+
+            services.AddCors(options => { options.AddPolicy("mCors", corsBuilder.Build()); });
         }
 
         /// <summary>
@@ -107,35 +103,31 @@ namespace TTMSWebAPI
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-	        //使用Session
-	        app.UseSession();
-	        
+            //使用Session
+            app.UseSession();
+
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
             app.UseMvc();
 
-			app.UseForwardedHeaders(new ForwardedHeadersOptions
-			{
-				ForwardedHeaders = ForwardedHeaders.XForwardedFor |
-								   ForwardedHeaders.XForwardedProto
-			});
+            app.UseForwardedHeaders(new ForwardedHeadersOptions
+            {
+                ForwardedHeaders = ForwardedHeaders.XForwardedFor |
+                                   ForwardedHeaders.XForwardedProto
+            });
 
-			app.UseCors("mCors");
+            app.UseCors("mCors");
 
-	        //读取连接字符串
-	        Servers.Server.SqlConString = Configuration.GetConnectionString("DefaultConnection");
+            //读取连接字符串
+            Servers.Server.SqlConString = Configuration.GetConnectionString("DefaultConnection");
 
-	        //
-	        // Enable middleware to serve generated Swagger as a JSON endpoint.
-	        app.UseSwagger();
+            //
+            // Enable middleware to serve generated Swagger as a JSON endpoint.
+            app.UseSwagger();
 
-	        // Enable middleware to serve swagger-ui (HTML, JS, CSS etc.), specifying the Swagger JSON endpoint.
-	        app.UseSwaggerUI(c =>
-	        {
-		        c.SwaggerEndpoint( "v1.1/swagger.json", "TTMS API v1.1");
-	        });
-
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS etc.), specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c => { c.SwaggerEndpoint("v1.1/swagger.json", "TTMS API v1.1"); });
         }
     }
 }

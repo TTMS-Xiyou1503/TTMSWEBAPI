@@ -1,5 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ContentModelStore">
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="TTMSWebAPI" t="IncludeRecursive">
+        <e p=".gitignore" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Controllers" t="Include">
+          <e p="GoodController.cs" t="Include" />
+          <e p="HomeController.cs" t="Include" />
+          <e p="OrderController.cs" t="Include" />
+          <e p="ProgrammeController.cs" t="Include" />
+          <e p="SeatController.cs" t="Include" />
+          <e p="TheaterController.cs" t="Include" />
+          <e p="TicketController.cs" t="Include" />
+          <e p="UserController.cs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="GoodModels.cs" t="Include" />
+          <e p="OrderModels.cs" t="Include" />
+          <e p="ProgrammeModels.cs" t="Include" />
+          <e p="ResultModels.cs" t="Include" />
+          <e p="SeatModels.cs" t="Include" />
+          <e p="TheaterModels.cs" t="Include" />
+          <e p="TicketModels.cs" t="Include" />
+          <e p="UserModels.cs" t="Include" />
+          <e p="VerCodeModel.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.0" t="Include">
+              <e p="TTMSWebAPI.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="README.md" t="Include" />
+        <e p="Servers" t="Include">
+          <e p="GoodServer.cs" t="Include" />
+          <e p="OrderServer.cs" t="Include" />
+          <e p="ProgrammeServer.cs" t="Include" />
+          <e p="SeatServer.cs" t="Include" />
+          <e p="Server.cs" t="Include" />
+          <e p="TheaterServer.cs" t="Include" />
+          <e p="TicketServer.cs" t="Include" />
+          <e p="UserServer.cs" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="TTMSWebAPI.csproj" t="IncludeRecursive" />
+        <e p="Views" t="Include">
+          <e p="Home" t="Include">
+            <e p="Get.cshtml" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="TTMSWebAPI.sln" t="IncludeFlat" />
+    </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2018.1/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_TTMSWebAPI.83879857.00" t="ExcludeRecursive" />
+  </component>
   <component name="RiderRiderContentModelStore">
     <excludedPaths />
   </component>

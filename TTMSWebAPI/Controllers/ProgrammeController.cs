@@ -276,7 +276,7 @@ namespace TTMSWebAPI.Controllers
                 var fileName = DateTime.Now.Ticks + ContentDispositionHeaderValue
                     .Parse(file.ContentDisposition)
                     .FileName
-                    .Trim('"');
+                    .Trim().Value;
                 //var filePath = env.WebRootPath + @"./PlayBill/" +  DateTime.Now.Ticks + $@"{fileName}"; // in unix
                 var filePath = env.WebRootPath + @".\PlayBill\" +  $@"{fileName}"; // in windows
 

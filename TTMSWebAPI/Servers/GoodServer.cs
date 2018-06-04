@@ -48,7 +48,7 @@ namespace TTMSWebAPI.Servers
 
                 sqlCom.ExecuteNonQuery();
 
-                var msg = (string)sqlCom.Parameters["@message"].Value;
+                var msg = (string) sqlCom.Parameters["@message"].Value;
 
                 var data = new List<object>();
 
@@ -58,18 +58,18 @@ namespace TTMSWebAPI.Servers
                 {
                     data.Add(new
                     {
-                        goodId = (int)reader[0],
-                        programmeId = (int)reader[1],
-                        theaterId = (int)reader[2],
-                        performance = (string)reader[3],
-                        playDate = (DateTime)reader[4],
-                        price = (decimal)reader[5]
+                        goodId = (int) reader[0],
+                        programmeId = (int) reader[1],
+                        theaterId = (int) reader[2],
+                        performance = (string) reader[3],
+                        playDate = (DateTime) reader[4],
+                        price = (decimal) reader[5]
                     });
                 }
 
                 return new
                 {
-                    result = (int)sqlCom.Parameters["@return"].Value,
+                    result = (int) sqlCom.Parameters["@return"].Value,
                     msg,
                     data
                 };
@@ -121,7 +121,7 @@ namespace TTMSWebAPI.Servers
 
                 sqlCom.ExecuteNonQuery();
 
-                var msg = (string)sqlCom.Parameters["@message"].Value;
+                var msg = (string) sqlCom.Parameters["@message"].Value;
 
                 object data = null;
 
@@ -131,18 +131,18 @@ namespace TTMSWebAPI.Servers
                 {
                     data = new
                     {
-                        goodId = (int)reader[0],
-                        programmeId = (int)reader[1],
-                        theaterId = (int)reader[2],
-                        performance = (string)reader[3],
-                        playDate = (DateTime)reader[4],
-                        price = (decimal)reader[5]
+                        goodId = (int) reader[0],
+                        programmeId = (int) reader[1],
+                        theaterId = (int) reader[2],
+                        performance = (string) reader[3],
+                        playDate = (DateTime) reader[4],
+                        price = (decimal) reader[5]
                     };
                 }
 
                 return new
                 {
-                    result = (int)sqlCom.Parameters["@return"].Value,
+                    result = (int) sqlCom.Parameters["@return"].Value,
                     msg,
                     data
                 };
@@ -215,7 +215,7 @@ namespace TTMSWebAPI.Servers
 
                 sqlCom.ExecuteNonQuery();
 
-                var msg = (string)sqlCom.Parameters["@message"].Value;
+                var msg = (string) sqlCom.Parameters["@message"].Value;
 
                 var data = new List<object>();
 
@@ -225,18 +225,18 @@ namespace TTMSWebAPI.Servers
                 {
                     data.Add(new
                     {
-                        goodId = (int)reader[0],
-                        programmeId = (int)reader[1],
-                        theaterId = (int)reader[2],
-                        performance = (string)reader[3],
-                        playDate = (DateTime)reader[4],
-                        price = (decimal)reader[5]
+                        goodId = (int) reader[0],
+                        programmeId = (int) reader[1],
+                        theaterId = (int) reader[2],
+                        performance = (string) reader[3],
+                        playDate = (DateTime) reader[4],
+                        price = (decimal) reader[5]
                     });
                 }
 
                 return new
                 {
-                    result = (int)sqlCom.Parameters["@return"].Value,
+                    result = (int) sqlCom.Parameters["@return"].Value,
                     msg,
                     data
                 };
@@ -316,11 +316,10 @@ namespace TTMSWebAPI.Servers
 
                 return new
                 {
-                    result = (int)sqlCom.Parameters["@return"].Value,
-                    msg = (string)sqlCom.Parameters["@message"].Value
+                    result = (int) sqlCom.Parameters["@return"].Value,
+                    msg = (string) sqlCom.Parameters["@message"].Value
                 };
             }
-
         }
 
         /// <summary>
@@ -367,11 +366,10 @@ namespace TTMSWebAPI.Servers
 
                 return new
                 {
-                    result = (int)sqlCom.Parameters["@return"].Value,
-                    msg = (string)sqlCom.Parameters["@message"].Value
+                    result = (int) sqlCom.Parameters["@return"].Value,
+                    msg = (string) sqlCom.Parameters["@message"].Value
                 };
             }
         }
-
     }
 }
