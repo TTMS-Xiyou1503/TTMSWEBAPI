@@ -265,7 +265,7 @@ namespace TTMSWebAPI.Servers
                     },
                     new SqlParameter
                     {
-                        ParameterName = "@Location",
+                        ParameterName = "@theaterLocation",
                         Direction = ParameterDirection.Input,
                         SqlDbType = SqlDbType.NVarChar,
                         Size = 30,
@@ -273,7 +273,7 @@ namespace TTMSWebAPI.Servers
                     },
                     new SqlParameter
                     {
-                        ParameterName = "@MapSite",
+                        ParameterName = "@theaterMapSite",
                         Direction = ParameterDirection.Input,
                         SqlDbType = SqlDbType.NVarChar,
                         Size = 30,
