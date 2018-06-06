@@ -108,14 +108,14 @@ namespace TTMSWebAPI.Controllers
         {
             try
             {
-                var addr = Server.GetUserIp(Request.HttpContext);
-                if (Server.IpHandle(addr) == 0)
-                {
-                    return new[] { "your ip can't using our api , please contact administrator" };
-                }
-                
-                var account = HttpContext.Session.GetString("user_account");
-
+//                var addr = Server.GetUserIp(Request.HttpContext);
+//                if (Server.IpHandle(addr) == 0)
+//                {
+//                    return new[] { "your ip can't using our api , please contact administrator" };
+//                }
+//                
+//                var account = HttpContext.Session.GetString("user_account");
+//
 //                if (account == null)
 //                {
 //                    return new
@@ -124,7 +124,7 @@ namespace TTMSWebAPI.Controllers
 //                        msg = "not login"
 //                    };
 //                }
-//                
+                
                 var re = OrderServer.AnalyseOrder(am);
 
                 return re;

@@ -10,7 +10,7 @@ namespace TTMSWebAPI.Controllers
     /// 主页
     /// </summary>
     [Route("[controller]")]
-    [EnableCors("mCors")] 
+    [EnableCors("mCors")]
     public class HomeController : Controller
     {
         /// <summary>
@@ -34,9 +34,12 @@ namespace TTMSWebAPI.Controllers
             {
                 var verCode = Server.VerCode();
 
-                HttpContext.Session.SetString("user_verCode" , verCode.code);
+                HttpContext.Session.Remove("user_verCode");
+                HttpContext.Session.SetString("user_verCode", verCode.code);
 
-                return Server.VerCode();
+                Console.WriteLine(HttpContext.Session.GetString("user_verCode"));
+
+                return verCode;
             }
             catch (Exception)
             {
@@ -44,6 +47,4 @@ namespace TTMSWebAPI.Controllers
             }
         }
     }
-
-    
 }
