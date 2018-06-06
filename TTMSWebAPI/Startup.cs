@@ -3,6 +3,7 @@ using System.IO;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -49,7 +50,7 @@ namespace TTMSWebAPI
             services.AddMvc();
 
             // Adds a default in-memory implementation of IDistributedCache.
-            // services.AddDistributedMemoryCache();
+            //services.AddDistributedMemoryCache();
             services.AddDistributedSqlServerCache(options =>
             {
                 options.ConnectionString = Configuration.GetConnectionString("sqlserverCacheConnection");
@@ -66,7 +67,14 @@ namespace TTMSWebAPI
                 options.Cookie.Name = ".TTMS.Session";
                 options.Cookie.HttpOnly = false;
 //                options.Cookie.Domain = ".ksgin.online";
-//                options.Cookie.Path = "/";
+                options.Cookie.Path = "/";
+            });
+            
+            services.Configure<CookiePolicyOptions>(options =>
+            {
+                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
+                options.CheckConsentNeeded = context => false;
+                options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
             //doc
@@ -105,10 +113,18 @@ namespace TTMSWebAPI
         {
             //使用Session
             app.UseSession();
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
+            }
 
-            loggerFactory.AddConsole(Configuration.GetSection("Logging"));
-            loggerFactory.AddDebug();
-
+            app.UseStaticFiles();
+            app.UseCookiePolicy();
+            
             app.UseMvc();
 
             app.UseForwardedHeaders(new ForwardedHeadersOptions

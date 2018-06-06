@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TTMSWebAPI/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TTMSWebAPI/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TTMSWebAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TTMSWebAPI/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TTMSWebAPI/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TTMSWebAPI/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TTMSWebAPI/Servers/Server.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TTMSWebAPI/Servers/Server.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TTMSWebAPI/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TTMSWebAPI/Startup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TTMSWebAPI/TTMSWebAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TTMSWebAPI/TTMSWebAPI.csproj" afterDir="false" />
     </list>
@@ -30,30 +29,41 @@
       <file leaf-file-name="Startup.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TTMSWebAPI/Startup.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="948">
-              <caret line="63" column="34" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
+            <state relative-caret-position="148">
+              <caret line="63" column="13" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
               <folding>
-                <marker date="1528249086252" expanded="true" signature="6:474" ph="..." />
-                <marker date="1528249086252" expanded="true" signature="496:4835" ph="{...}" />
-                <marker date="1528249086252" expanded="true" signature="503:547" ph="/// 启动类 ... " />
-                <marker date="1528249086252" expanded="true" signature="572:4833" ph="{...}" />
-                <marker date="1528249086252" expanded="true" signature="587:679" ph="/// 启动方法 ... " />
-                <marker date="1528249086252" expanded="true" signature="727:1079" ph="{...}" />
-                <marker date="1528249086252" expanded="true" signature="1089:1142" ph="/// 启动属性 ... " />
-                <marker date="1528249086252" expanded="true" signature="1209:1308" ph="/// 配置启动属性 ... " />
-                <marker date="1528249086252" expanded="true" signature="1476:3479" ph="{...}" />
-                <marker date="1528249086252" expanded="true" signature="1570:1687" ph="/* Adds a default in-memory implementation of IDistributedCache. ... */" />
-                <marker date="1528249086252" expanded="true" signature="1748:2030" ph="{...}" />
-                <marker date="1528249086252" expanded="true" signature="2102:2433" ph="{...}" />
-                <marker date="1528249086252" expanded="true" signature="2316:2419" ph="/* options.Cookie.Domain = &quot;.ksgin.online&quot;; ... */" />
-                <marker date="1528249086252" expanded="true" signature="2449:2493" ph="/* doc ... */" />
-                <marker date="1528249086252" expanded="true" signature="2693:2953" ph="{...}" />
-                <marker date="1528249086252" expanded="true" signature="2969:3054" ph="/* Setup CORS ... */" />
-                <marker date="1528249086252" expanded="true" signature="3489:3671" ph="/// 配置启动属性 ... " />
-                <marker date="1528249086252" expanded="true" signature="3888:4827" ph="{...}" />
-                <marker date="1528249086252" expanded="true" signature="4171:4322" ph="{...}" />
-                <marker date="1528249086252" expanded="true" signature="4494:4576" ph="/* Enable middleware to serve generated Swagger as a JSON endpoint. ... */" />
+                <marker date="1528260305752" expanded="true" signature="6:507" ph="..." />
+                <marker date="1528260305752" expanded="true" signature="529:5404" ph="{...}" />
+                <marker date="1528260305752" expanded="true" signature="536:580" ph="/// 启动类 ... " />
+                <marker date="1528260305752" expanded="true" signature="605:5402" ph="{...}" />
+                <marker date="1528260305752" expanded="true" signature="620:712" ph="/// 启动方法 ... " />
+                <marker date="1528260305752" expanded="true" signature="760:1112" ph="{...}" />
+                <marker date="1528260305752" expanded="true" signature="1122:1175" ph="/// 启动属性 ... " />
+                <marker date="1528260305752" expanded="true" signature="1242:1341" ph="/// 配置启动属性 ... " />
+                <marker date="1528260305752" expanded="true" signature="1509:3865" ph="{...}" />
+                <marker date="1528260305752" expanded="true" signature="1603:1719" ph="/* Adds a default in-memory implementation of IDistributedCache. ... */" />
+                <marker date="1528260305752" expanded="true" signature="1780:2062" ph="{...}" />
+                <marker date="1528260305752" expanded="true" signature="2134:2463" ph="{...}" />
+                <marker date="1528260305752" expanded="true" signature="2541:2819" ph="{...}" />
+                <marker date="1528260305752" expanded="true" signature="2835:2879" ph="/* doc ... */" />
+                <marker date="1528260305752" expanded="true" signature="3079:3339" ph="{...}" />
+                <marker date="1528260305752" expanded="true" signature="3355:3440" ph="/* Setup CORS ... */" />
+                <marker date="1528260305752" expanded="true" signature="3875:4057" ph="/// 配置启动属性 ... " />
+                <marker date="1528260305752" expanded="true" signature="4274:5396" ph="{...}" />
+                <marker date="1528260305752" expanded="true" signature="4375:4452" ph="{...}" />
+                <marker date="1528260305752" expanded="true" signature="4469:4553" ph="{...}" />
+                <marker date="1528260305752" expanded="true" signature="4740:4891" ph="{...}" />
+                <marker date="1528260305752" expanded="true" signature="5063:5145" ph="/* Enable middleware to serve generated Swagger as a JSON endpoint. ... */" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="appsettings.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TTMSWebAPI/appsettings.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -115,8 +125,8 @@
       <file leaf-file-name="GoodController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TTMSWebAPI/Controllers/GoodController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="586">
-              <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
+            <state relative-caret-position="-3444">
+              <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
               <folding>
                 <marker date="1528172975827" expanded="false" signature="6:162" ph="..." />
                 <marker date="1528172975827" expanded="true" signature="196:6108" ph="{...}" />
@@ -160,8 +170,8 @@
       <file leaf-file-name="UserController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TTMSWebAPI/Controllers/UserController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+            <state relative-caret-position="1984">
+              <caret line="190" column="9" selection-start-line="190" selection-start-column="9" selection-end-line="190" selection-end-column="9" />
               <folding>
                 <marker date="1528173265774" expanded="false" signature="6:162" ph="..." />
                 <marker date="1528173265774" expanded="true" signature="196:12512" ph="{...}" />
@@ -359,23 +369,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Program.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TTMSWebAPI/Program.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="23" column="42" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="42" />
-              <folding>
-                <marker date="1528073770448" expanded="false" signature="6:52" ph="..." />
-                <marker date="1528073770448" expanded="true" signature="74:696" ph="{...}" />
-                <marker date="1528073770448" expanded="true" signature="81:124" ph="/// 主类 ... " />
-                <marker date="1528073770448" expanded="true" signature="149:694" ph="{...}" />
-                <marker date="1528073770448" expanded="true" signature="164:256" ph="/// 主方法 ... " />
-                <marker date="1528073770448" expanded="true" signature="303:688" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="OrderController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TTMSWebAPI/Controllers/OrderController.cs">
           <provider selected="true" editor-type-id="text-editor">
@@ -416,19 +409,19 @@
       <file leaf-file-name="HomeController.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TTMSWebAPI/Controllers/HomeController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="335">
+              <caret line="44" column="13" lean-forward="true" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
               <folding>
-                <marker date="1528249378668" expanded="false" signature="6:137" ph="..." />
-                <marker date="1528249378668" expanded="true" signature="171:1067" ph="{...}" />
-                <marker date="1528249378668" expanded="true" signature="178:221" ph="/// 主页 ... " />
-                <marker date="1528249378668" expanded="true" signature="321:1059" ph="{...}" />
-                <marker date="1528249378668" expanded="true" signature="336:423" ph="/// 主页 ... " />
-                <marker date="1528249378668" expanded="true" signature="473:520" ph="{...}" />
-                <marker date="1528249378668" expanded="true" signature="530:617" ph="/// 验证码 ... " />
-                <marker date="1528249378668" expanded="true" signature="679:1053" ph="{...}" />
-                <marker date="1528249378668" expanded="true" signature="705:956" ph="{...}" />
-                <marker date="1528249378668" expanded="true" signature="986:1043" ph="{...}" />
+                <marker date="1528263634657" expanded="false" signature="6:137" ph="..." />
+                <marker date="1528263634657" expanded="true" signature="171:1139" ph="{...}" />
+                <marker date="1528263634657" expanded="true" signature="178:221" ph="/// 主页 ... " />
+                <marker date="1528263634657" expanded="true" signature="320:1137" ph="{...}" />
+                <marker date="1528263634657" expanded="true" signature="335:422" ph="/// 主页 ... " />
+                <marker date="1528263634657" expanded="true" signature="472:519" ph="{...}" />
+                <marker date="1528263634657" expanded="true" signature="529:616" ph="/// 验证码 ... " />
+                <marker date="1528263634657" expanded="true" signature="678:1131" ph="{...}" />
+                <marker date="1528263634657" expanded="true" signature="704:1034" ph="{...}" />
+                <marker date="1528263634657" expanded="true" signature="1064:1121" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -437,33 +430,33 @@
       <file leaf-file-name="Server.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TTMSWebAPI/Servers/Server.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="119" column="12" selection-start-line="119" selection-start-column="12" selection-end-line="119" selection-end-column="12" />
+            <state relative-caret-position="392">
+              <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
               <folding>
-                <marker date="1528251205771" expanded="true" signature="6:188" ph="..." />
-                <marker date="1528251205771" expanded="true" signature="218:3721" ph="{...}" />
-                <marker date="1528251205771" expanded="true" signature="225:273" ph="/// Server类 ... " />
-                <marker date="1528251205771" expanded="true" signature="304:3719" ph="{...}" />
-                <marker date="1528251205771" expanded="true" signature="310:352" ph="/// 连接字符串 ... " />
-                <marker date="1528251205771" expanded="true" signature="398:470" ph="/// 日志 ... " />
-                <marker date="1528251205771" expanded="true" signature="507:584" ph="{...}" />
-                <marker date="1528251205771" expanded="true" signature="588:694" ph="/// 获得用户ID ... " />
-                <marker date="1528251205771" expanded="true" signature="748:955" ph="{...}" />
-                <marker date="1528251205771" expanded="true" signature="858:936" ph="{...}" />
-                <marker date="1528251205771" expanded="true" signature="960:1064" ph="/// 对用户IP进行处理 ... " />
-                <marker date="1528251205771" expanded="true" signature="1104:1809" ph="{...}" />
-                <marker date="1528251205771" expanded="true" signature="1161:1805" ph="{...}" />
-                <marker date="1528251205771" expanded="true" signature="1339:1667" ph="{...}" />
-                <marker date="1528251205771" expanded="true" signature="1813:1885" ph="/// 验证码Base64 ... " />
-                <marker date="1528251205771" expanded="true" signature="1924:3716" ph="{...}" />
-                <marker date="1528251205771" expanded="true" signature="2243:2337" ph="{...}" />
-                <marker date="1528251205771" expanded="true" signature="2579:2722" ph="/* 验证码的字符集，去掉了一些容易混淆的字符 ... */" />
-                <marker date="1528251205771" expanded="true" signature="2863:3084" ph="{...}" />
-                <marker date="1528251205771" expanded="true" signature="3142:3371" ph="{...}" />
-                <marker date="1528251205771" expanded="true" signature="3450:3607" ph="{...}" />
-                <marker date="1528251205771" expanded="true" signature="3529:3601" ph="{...}" />
-                <marker date="1528251205771" expanded="true" signature="3628:3655" ph="{...}" />
-                <marker date="1528251205771" expanded="true" signature="3666:3712" ph="{...}" />
+                <marker date="1528257891383" expanded="true" signature="6:188" ph="..." />
+                <marker date="1528257891383" expanded="true" signature="218:3721" ph="{...}" />
+                <marker date="1528257891383" expanded="true" signature="225:273" ph="/// Server类 ... " />
+                <marker date="1528257891383" expanded="true" signature="304:3719" ph="{...}" />
+                <marker date="1528257891383" expanded="true" signature="310:352" ph="/// 连接字符串 ... " />
+                <marker date="1528257891383" expanded="true" signature="398:470" ph="/// 日志 ... " />
+                <marker date="1528257891383" expanded="true" signature="507:584" ph="{...}" />
+                <marker date="1528257891383" expanded="true" signature="588:694" ph="/// 获得用户ID ... " />
+                <marker date="1528257891383" expanded="true" signature="748:955" ph="{...}" />
+                <marker date="1528257891383" expanded="true" signature="858:936" ph="{...}" />
+                <marker date="1528257891383" expanded="true" signature="960:1064" ph="/// 对用户IP进行处理 ... " />
+                <marker date="1528257891383" expanded="true" signature="1104:1809" ph="{...}" />
+                <marker date="1528257891383" expanded="true" signature="1161:1805" ph="{...}" />
+                <marker date="1528257891383" expanded="true" signature="1339:1667" ph="{...}" />
+                <marker date="1528257891383" expanded="true" signature="1813:1885" ph="/// 验证码Base64 ... " />
+                <marker date="1528257891383" expanded="true" signature="1924:3716" ph="{...}" />
+                <marker date="1528257891383" expanded="true" signature="2243:2337" ph="{...}" />
+                <marker date="1528257891383" expanded="true" signature="2579:2722" ph="/* 验证码的字符集，去掉了一些容易混淆的字符 ... */" />
+                <marker date="1528257891383" expanded="true" signature="2863:3084" ph="{...}" />
+                <marker date="1528257891383" expanded="true" signature="3142:3371" ph="{...}" />
+                <marker date="1528257891383" expanded="true" signature="3450:3607" ph="{...}" />
+                <marker date="1528257891383" expanded="true" signature="3529:3601" ph="{...}" />
+                <marker date="1528257891383" expanded="true" signature="3628:3655" ph="{...}" />
+                <marker date="1528257891383" expanded="true" signature="3666:3712" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -539,7 +532,6 @@
         <option value="$PROJECT_DIR$/TTMSWebAPI/Servers/TicketServer.cs" />
         <option value="$PROJECT_DIR$/TTMSWebAPI/Models/OrderModels.cs" />
         <option value="$PROJECT_DIR$/TTMSWebAPI/Servers/GoodServer.cs" />
-        <option value="$PROJECT_DIR$/TTMSWebAPI/appsettings.json" />
         <option value="$PROJECT_DIR$/TTMSWebAPI/Controllers/GoodController.cs" />
         <option value="$PROJECT_DIR$/TTMSWebAPI/Controllers/OrderController.cs" />
         <option value="$PROJECT_DIR$/TTMSWebAPI/Controllers/ProgrammeController.cs" />
@@ -548,9 +540,10 @@
         <option value="$PROJECT_DIR$/TTMSWebAPI/Controllers/TicketController.cs" />
         <option value="$PROJECT_DIR$/TTMSWebAPI/Controllers/UserController.cs" />
         <option value="$PROJECT_DIR$/TTMSWebAPI/Servers/OrderServer.cs" />
+        <option value="$PROJECT_DIR$/TTMSWebAPI/appsettings.json" />
+        <option value="$PROJECT_DIR$/TTMSWebAPI/Servers/Server.cs" />
         <option value="$PROJECT_DIR$/TTMSWebAPI/Startup.cs" />
         <option value="$PROJECT_DIR$/TTMSWebAPI/Controllers/HomeController.cs" />
-        <option value="$PROJECT_DIR$/TTMSWebAPI/Servers/Server.cs" />
       </list>
     </option>
   </component>
@@ -767,7 +760,7 @@
       <workItem from="1528075908128" duration="229000" />
       <workItem from="1528076260743" duration="3553000" />
       <workItem from="1528169537031" duration="1789000" />
-      <workItem from="1528207951571" duration="6085000" />
+      <workItem from="1528207951571" duration="11336000" />
     </task>
     <task id="LOCAL-00001" summary="提交">
       <created>1493343032355</created>
@@ -787,7 +780,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129902000" />
+    <option name="totallyTimeSpent" value="135153000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -800,25 +793,24 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Errors In Solution" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.3421875" side_tool="true" visible="true" weight="0.4318182" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.3390625" side_tool="true" visible="true" weight="0.32219252" />
       <window_info anchor="bottom" id="Unit Tests" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="REST Client" order="8" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.66328126" weight="0.32219252" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6609375" visible="true" weight="0.32219252" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="NuGet" order="7" sideWeight="0.6578125" weight="0.4318182" />
+      <window_info anchor="bottom" id="NuGet" order="7" sideWeight="0.65625" weight="0.28743315" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.203125" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49609375" weight="0.328877" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.4953125" weight="0.328877" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4953125" weight="0.35828876" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49375" weight="0.35828876" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -845,21 +837,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/TTMSWebAPI/Servers/Server.cs</url>
-          <line>114</line>
-          <properties documentPath="$PROJECT_DIR$/TTMSWebAPI/Servers/Server.cs" initialLine="114">
-            <startOffsets>
-              <startOffset value="2539" />
-            </startOffsets>
-            <endOffsets>
-              <endOffset value="2575" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-      </breakpoints>
       <option name="time" value="15" />
     </breakpoint-manager>
   </component>
@@ -1101,13 +1078,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TTMSWebAPI/appsettings.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="11" selection-start-line="11" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TTMSWebAPI/Controllers/ProgrammeController.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7623">
@@ -1311,84 +1281,6 @@
             <marker date="1528073770448" expanded="true" signature="149:694" ph="{...}" />
             <marker date="1528073770448" expanded="true" signature="164:256" ph="/// 主方法 ... " />
             <marker date="1528073770448" expanded="true" signature="303:688" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TTMSWebAPI/Controllers/UserController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
-          <folding>
-            <marker date="1528173265774" expanded="false" signature="6:162" ph="..." />
-            <marker date="1528173265774" expanded="true" signature="196:12512" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="208:258" ph="/// 人事管理操作API ... " />
-            <marker date="1528173265774" expanded="true" signature="357:12510" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="372:459" ph="/// 列出所有用户 ... " />
-            <marker date="1528173265774" expanded="true" signature="505:1456" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="531:1244" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="546:1151" ph="/* var addr = Server.GetUserIp(Request.HttpContext); ... */" />
-            <marker date="1528173265774" expanded="true" signature="1276:1445" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="1334:1430" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="1466:1621" ph="/// 筛选影厅用户（管理者以及所属影厅的售票员） ... " />
-            <marker date="1528173265774" expanded="true" signature="1711:2671" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="1737:2459" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="1752:2357" ph="/* var addr = Server.GetUserIp(Request.HttpContext); ... */" />
-            <marker date="1528173265774" expanded="true" signature="2491:2660" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="2549:2645" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="2689:2819" ph="/// 获得用户信息 ... " />
-            <marker date="1528173265774" expanded="true" signature="2908:3871" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="2934:3660" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="2949:3556" ph="/* var addr = Server.GetUserIp(Request.HttpContext); ... */" />
-            <marker date="1528173265774" expanded="true" signature="3692:3861" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="3750:3846" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="3889:4018" ph="/// 获得用户信息 ... " />
-            <marker date="1528173265774" expanded="true" signature="4097:5068" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="4123:4857" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="4138:4743" ph="/* var addr = Server.GetUserIp(Request.HttpContext); ... */" />
-            <marker date="1528173265774" expanded="true" signature="4889:5058" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="4947:5043" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="5086:5217" ph="/// 用户登陆 ... " />
-            <marker date="1528173265774" expanded="true" signature="5333:6759" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="5359:6547" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="5374:5635" ph="/* var addr = Server.GetUserIp(Request.HttpContext); ... */" />
-            <marker date="1528173265774" expanded="true" signature="5751:5957" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="5821:5938" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="6002:6286" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="6072:6267" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="6373:6489" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="6579:6748" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="6637:6733" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="6777:6910" ph="/// 用户修改密码 ... " />
-            <marker date="1528173265774" expanded="true" signature="7052:8012" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="7078:7801" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="7093:7698" ph="/* var addr = Server.GetUserIp(Request.HttpContext); ... */" />
-            <marker date="1528173265774" expanded="true" signature="7833:8002" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="7891:7987" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="8022:8155" ph="/// 用户修改等级 ... " />
-            <marker date="1528173265774" expanded="true" signature="8291:9248" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="8317:9037" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="8332:8921" ph="/* var addr = Server.GetUserIp(Request.HttpContext); ... */" />
-            <marker date="1528173265774" expanded="true" signature="9069:9238" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="9127:9223" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="9258:9391" ph="/// 用户修改电话 ... " />
-            <marker date="1528173265774" expanded="true" signature="9523:10478" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="9549:10267" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="9564:10169" ph="/* var addr = Server.GetUserIp(Request.HttpContext); ... */" />
-            <marker date="1528173265774" expanded="true" signature="10299:10468" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="10357:10453" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="10496:10631" ph="/// 增加一个新用户 ... " />
-            <marker date="1528173265774" expanded="true" signature="10725:11330" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="10751:11119" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="10766:11024" ph="/* var addr = Server.GetUserIp(Request.HttpContext); ... */" />
-            <marker date="1528173265774" expanded="true" signature="11151:11320" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="11209:11305" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="11340:11473" ph="/// 删除一个用户 ... " />
-            <marker date="1528173265774" expanded="true" signature="11552:12504" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="11578:12293" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="11593:12198" ph="/* var addr = Server.GetUserIp(Request.HttpContext); ... */" />
-            <marker date="1528173265774" expanded="true" signature="12325:12494" ph="{...}" />
-            <marker date="1528173265774" expanded="true" signature="12383:12479" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1600,39 +1492,128 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TTMSWebAPI/Startup.cs">
+    <entry file="file://$PROJECT_DIR$/TTMSWebAPI/appsettings.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="948">
-          <caret line="63" column="34" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
+        <state relative-caret-position="231">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TTMSWebAPI/Controllers/UserController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1984">
+          <caret line="190" column="9" selection-start-line="190" selection-start-column="9" selection-end-line="190" selection-end-column="9" />
           <folding>
-            <marker date="1528249086252" expanded="true" signature="6:474" ph="..." />
-            <marker date="1528249086252" expanded="true" signature="496:4835" ph="{...}" />
-            <marker date="1528249086252" expanded="true" signature="503:547" ph="/// 启动类 ... " />
-            <marker date="1528249086252" expanded="true" signature="572:4833" ph="{...}" />
-            <marker date="1528249086252" expanded="true" signature="587:679" ph="/// 启动方法 ... " />
-            <marker date="1528249086252" expanded="true" signature="727:1079" ph="{...}" />
-            <marker date="1528249086252" expanded="true" signature="1089:1142" ph="/// 启动属性 ... " />
-            <marker date="1528249086252" expanded="true" signature="1209:1308" ph="/// 配置启动属性 ... " />
-            <marker date="1528249086252" expanded="true" signature="1476:3479" ph="{...}" />
-            <marker date="1528249086252" expanded="true" signature="1570:1687" ph="/* Adds a default in-memory implementation of IDistributedCache. ... */" />
-            <marker date="1528249086252" expanded="true" signature="1748:2030" ph="{...}" />
-            <marker date="1528249086252" expanded="true" signature="2102:2433" ph="{...}" />
-            <marker date="1528249086252" expanded="true" signature="2316:2419" ph="/* options.Cookie.Domain = &quot;.ksgin.online&quot;; ... */" />
-            <marker date="1528249086252" expanded="true" signature="2449:2493" ph="/* doc ... */" />
-            <marker date="1528249086252" expanded="true" signature="2693:2953" ph="{...}" />
-            <marker date="1528249086252" expanded="true" signature="2969:3054" ph="/* Setup CORS ... */" />
-            <marker date="1528249086252" expanded="true" signature="3489:3671" ph="/// 配置启动属性 ... " />
-            <marker date="1528249086252" expanded="true" signature="3888:4827" ph="{...}" />
-            <marker date="1528249086252" expanded="true" signature="4171:4322" ph="{...}" />
-            <marker date="1528249086252" expanded="true" signature="4494:4576" ph="/* Enable middleware to serve generated Swagger as a JSON endpoint. ... */" />
+            <marker date="1528173265774" expanded="false" signature="6:162" ph="..." />
+            <marker date="1528173265774" expanded="true" signature="196:12512" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="208:258" ph="/// 人事管理操作API ... " />
+            <marker date="1528173265774" expanded="true" signature="357:12510" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="372:459" ph="/// 列出所有用户 ... " />
+            <marker date="1528173265774" expanded="true" signature="505:1456" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="531:1244" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="546:1151" ph="/* var addr = Server.GetUserIp(Request.HttpContext); ... */" />
+            <marker date="1528173265774" expanded="true" signature="1276:1445" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="1334:1430" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="1466:1621" ph="/// 筛选影厅用户（管理者以及所属影厅的售票员） ... " />
+            <marker date="1528173265774" expanded="true" signature="1711:2671" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="1737:2459" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="1752:2357" ph="/* var addr = Server.GetUserIp(Request.HttpContext); ... */" />
+            <marker date="1528173265774" expanded="true" signature="2491:2660" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="2549:2645" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="2689:2819" ph="/// 获得用户信息 ... " />
+            <marker date="1528173265774" expanded="true" signature="2908:3871" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="2934:3660" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="2949:3556" ph="/* var addr = Server.GetUserIp(Request.HttpContext); ... */" />
+            <marker date="1528173265774" expanded="true" signature="3692:3861" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="3750:3846" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="3889:4018" ph="/// 获得用户信息 ... " />
+            <marker date="1528173265774" expanded="true" signature="4097:5068" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="4123:4857" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="4138:4743" ph="/* var addr = Server.GetUserIp(Request.HttpContext); ... */" />
+            <marker date="1528173265774" expanded="true" signature="4889:5058" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="4947:5043" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="5086:5217" ph="/// 用户登陆 ... " />
+            <marker date="1528173265774" expanded="true" signature="5333:6759" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="5359:6547" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="5374:5635" ph="/* var addr = Server.GetUserIp(Request.HttpContext); ... */" />
+            <marker date="1528173265774" expanded="true" signature="5751:5957" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="5821:5938" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="6002:6286" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="6072:6267" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="6373:6489" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="6579:6748" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="6637:6733" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="6777:6910" ph="/// 用户修改密码 ... " />
+            <marker date="1528173265774" expanded="true" signature="7052:8012" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="7078:7801" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="7093:7698" ph="/* var addr = Server.GetUserIp(Request.HttpContext); ... */" />
+            <marker date="1528173265774" expanded="true" signature="7833:8002" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="7891:7987" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="8022:8155" ph="/// 用户修改等级 ... " />
+            <marker date="1528173265774" expanded="true" signature="8291:9248" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="8317:9037" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="8332:8921" ph="/* var addr = Server.GetUserIp(Request.HttpContext); ... */" />
+            <marker date="1528173265774" expanded="true" signature="9069:9238" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="9127:9223" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="9258:9391" ph="/// 用户修改电话 ... " />
+            <marker date="1528173265774" expanded="true" signature="9523:10478" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="9549:10267" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="9564:10169" ph="/* var addr = Server.GetUserIp(Request.HttpContext); ... */" />
+            <marker date="1528173265774" expanded="true" signature="10299:10468" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="10357:10453" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="10496:10631" ph="/// 增加一个新用户 ... " />
+            <marker date="1528173265774" expanded="true" signature="10725:11330" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="10751:11119" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="10766:11024" ph="/* var addr = Server.GetUserIp(Request.HttpContext); ... */" />
+            <marker date="1528173265774" expanded="true" signature="11151:11320" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="11209:11305" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="11340:11473" ph="/// 删除一个用户 ... " />
+            <marker date="1528173265774" expanded="true" signature="11552:12504" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="11578:12293" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="11593:12198" ph="/* var addr = Server.GetUserIp(Request.HttpContext); ... */" />
+            <marker date="1528173265774" expanded="true" signature="12325:12494" ph="{...}" />
+            <marker date="1528173265774" expanded="true" signature="12383:12479" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TTMSWebAPI/Servers/Server.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+          <folding>
+            <marker date="1528257891383" expanded="true" signature="6:188" ph="..." />
+            <marker date="1528257891383" expanded="true" signature="218:3721" ph="{...}" />
+            <marker date="1528257891383" expanded="true" signature="225:273" ph="/// Server类 ... " />
+            <marker date="1528257891383" expanded="true" signature="304:3719" ph="{...}" />
+            <marker date="1528257891383" expanded="true" signature="310:352" ph="/// 连接字符串 ... " />
+            <marker date="1528257891383" expanded="true" signature="398:470" ph="/// 日志 ... " />
+            <marker date="1528257891383" expanded="true" signature="507:584" ph="{...}" />
+            <marker date="1528257891383" expanded="true" signature="588:694" ph="/// 获得用户ID ... " />
+            <marker date="1528257891383" expanded="true" signature="748:955" ph="{...}" />
+            <marker date="1528257891383" expanded="true" signature="858:936" ph="{...}" />
+            <marker date="1528257891383" expanded="true" signature="960:1064" ph="/// 对用户IP进行处理 ... " />
+            <marker date="1528257891383" expanded="true" signature="1104:1809" ph="{...}" />
+            <marker date="1528257891383" expanded="true" signature="1161:1805" ph="{...}" />
+            <marker date="1528257891383" expanded="true" signature="1339:1667" ph="{...}" />
+            <marker date="1528257891383" expanded="true" signature="1813:1885" ph="/// 验证码Base64 ... " />
+            <marker date="1528257891383" expanded="true" signature="1924:3716" ph="{...}" />
+            <marker date="1528257891383" expanded="true" signature="2243:2337" ph="{...}" />
+            <marker date="1528257891383" expanded="true" signature="2579:2722" ph="/* 验证码的字符集，去掉了一些容易混淆的字符 ... */" />
+            <marker date="1528257891383" expanded="true" signature="2863:3084" ph="{...}" />
+            <marker date="1528257891383" expanded="true" signature="3142:3371" ph="{...}" />
+            <marker date="1528257891383" expanded="true" signature="3450:3607" ph="{...}" />
+            <marker date="1528257891383" expanded="true" signature="3529:3601" ph="{...}" />
+            <marker date="1528257891383" expanded="true" signature="3628:3655" ph="{...}" />
+            <marker date="1528257891383" expanded="true" signature="3666:3712" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TTMSWebAPI/Controllers/GoodController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="586">
-          <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
+        <state relative-caret-position="-3444">
+          <caret line="40" column="19" selection-start-line="40" selection-start-column="19" selection-end-line="40" selection-end-column="19" />
           <folding>
             <marker date="1528172975827" expanded="false" signature="6:162" ph="..." />
             <marker date="1528172975827" expanded="true" signature="196:6108" ph="{...}" />
@@ -1672,61 +1653,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TTMSWebAPI/Servers/Server.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="119" column="12" selection-start-line="119" selection-start-column="12" selection-end-line="119" selection-end-column="12" />
-          <folding>
-            <marker date="1528251205771" expanded="true" signature="6:188" ph="..." />
-            <marker date="1528251205771" expanded="true" signature="218:3721" ph="{...}" />
-            <marker date="1528251205771" expanded="true" signature="225:273" ph="/// Server类 ... " />
-            <marker date="1528251205771" expanded="true" signature="304:3719" ph="{...}" />
-            <marker date="1528251205771" expanded="true" signature="310:352" ph="/// 连接字符串 ... " />
-            <marker date="1528251205771" expanded="true" signature="398:470" ph="/// 日志 ... " />
-            <marker date="1528251205771" expanded="true" signature="507:584" ph="{...}" />
-            <marker date="1528251205771" expanded="true" signature="588:694" ph="/// 获得用户ID ... " />
-            <marker date="1528251205771" expanded="true" signature="748:955" ph="{...}" />
-            <marker date="1528251205771" expanded="true" signature="858:936" ph="{...}" />
-            <marker date="1528251205771" expanded="true" signature="960:1064" ph="/// 对用户IP进行处理 ... " />
-            <marker date="1528251205771" expanded="true" signature="1104:1809" ph="{...}" />
-            <marker date="1528251205771" expanded="true" signature="1161:1805" ph="{...}" />
-            <marker date="1528251205771" expanded="true" signature="1339:1667" ph="{...}" />
-            <marker date="1528251205771" expanded="true" signature="1813:1885" ph="/// 验证码Base64 ... " />
-            <marker date="1528251205771" expanded="true" signature="1924:3716" ph="{...}" />
-            <marker date="1528251205771" expanded="true" signature="2243:2337" ph="{...}" />
-            <marker date="1528251205771" expanded="true" signature="2579:2722" ph="/* 验证码的字符集，去掉了一些容易混淆的字符 ... */" />
-            <marker date="1528251205771" expanded="true" signature="2863:3084" ph="{...}" />
-            <marker date="1528251205771" expanded="true" signature="3142:3371" ph="{...}" />
-            <marker date="1528251205771" expanded="true" signature="3450:3607" ph="{...}" />
-            <marker date="1528251205771" expanded="true" signature="3529:3601" ph="{...}" />
-            <marker date="1528251205771" expanded="true" signature="3628:3655" ph="{...}" />
-            <marker date="1528251205771" expanded="true" signature="3666:3712" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.config/NuGet/NuGet.Config">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TTMSWebAPI/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="63" column="13" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
+          <folding>
+            <marker date="1528260305752" expanded="true" signature="6:507" ph="..." />
+            <marker date="1528260305752" expanded="true" signature="529:5404" ph="{...}" />
+            <marker date="1528260305752" expanded="true" signature="536:580" ph="/// 启动类 ... " />
+            <marker date="1528260305752" expanded="true" signature="605:5402" ph="{...}" />
+            <marker date="1528260305752" expanded="true" signature="620:712" ph="/// 启动方法 ... " />
+            <marker date="1528260305752" expanded="true" signature="760:1112" ph="{...}" />
+            <marker date="1528260305752" expanded="true" signature="1122:1175" ph="/// 启动属性 ... " />
+            <marker date="1528260305752" expanded="true" signature="1242:1341" ph="/// 配置启动属性 ... " />
+            <marker date="1528260305752" expanded="true" signature="1509:3865" ph="{...}" />
+            <marker date="1528260305752" expanded="true" signature="1603:1719" ph="/* Adds a default in-memory implementation of IDistributedCache. ... */" />
+            <marker date="1528260305752" expanded="true" signature="1780:2062" ph="{...}" />
+            <marker date="1528260305752" expanded="true" signature="2134:2463" ph="{...}" />
+            <marker date="1528260305752" expanded="true" signature="2541:2819" ph="{...}" />
+            <marker date="1528260305752" expanded="true" signature="2835:2879" ph="/* doc ... */" />
+            <marker date="1528260305752" expanded="true" signature="3079:3339" ph="{...}" />
+            <marker date="1528260305752" expanded="true" signature="3355:3440" ph="/* Setup CORS ... */" />
+            <marker date="1528260305752" expanded="true" signature="3875:4057" ph="/// 配置启动属性 ... " />
+            <marker date="1528260305752" expanded="true" signature="4274:5396" ph="{...}" />
+            <marker date="1528260305752" expanded="true" signature="4375:4452" ph="{...}" />
+            <marker date="1528260305752" expanded="true" signature="4469:4553" ph="{...}" />
+            <marker date="1528260305752" expanded="true" signature="4740:4891" ph="{...}" />
+            <marker date="1528260305752" expanded="true" signature="5063:5145" ph="/* Enable middleware to serve generated Swagger as a JSON endpoint. ... */" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TTMSWebAPI/Controllers/HomeController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="335">
+          <caret line="44" column="13" lean-forward="true" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="13" />
           <folding>
-            <marker date="1528249378668" expanded="false" signature="6:137" ph="..." />
-            <marker date="1528249378668" expanded="true" signature="171:1067" ph="{...}" />
-            <marker date="1528249378668" expanded="true" signature="178:221" ph="/// 主页 ... " />
-            <marker date="1528249378668" expanded="true" signature="321:1059" ph="{...}" />
-            <marker date="1528249378668" expanded="true" signature="336:423" ph="/// 主页 ... " />
-            <marker date="1528249378668" expanded="true" signature="473:520" ph="{...}" />
-            <marker date="1528249378668" expanded="true" signature="530:617" ph="/// 验证码 ... " />
-            <marker date="1528249378668" expanded="true" signature="679:1053" ph="{...}" />
-            <marker date="1528249378668" expanded="true" signature="705:956" ph="{...}" />
-            <marker date="1528249378668" expanded="true" signature="986:1043" ph="{...}" />
+            <marker date="1528263634657" expanded="false" signature="6:137" ph="..." />
+            <marker date="1528263634657" expanded="true" signature="171:1139" ph="{...}" />
+            <marker date="1528263634657" expanded="true" signature="178:221" ph="/// 主页 ... " />
+            <marker date="1528263634657" expanded="true" signature="320:1137" ph="{...}" />
+            <marker date="1528263634657" expanded="true" signature="335:422" ph="/// 主页 ... " />
+            <marker date="1528263634657" expanded="true" signature="472:519" ph="{...}" />
+            <marker date="1528263634657" expanded="true" signature="529:616" ph="/// 验证码 ... " />
+            <marker date="1528263634657" expanded="true" signature="678:1131" ph="{...}" />
+            <marker date="1528263634657" expanded="true" signature="704:1034" ph="{...}" />
+            <marker date="1528263634657" expanded="true" signature="1064:1121" ph="{...}" />
           </folding>
         </state>
       </provider>
