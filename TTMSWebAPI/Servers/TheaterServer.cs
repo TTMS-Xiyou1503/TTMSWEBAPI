@@ -133,7 +133,7 @@ namespace TTMSWebAPI.Servers
                     {
                         theaterId = (int)reader[0],
                         theaterName = reader[1] != DBNull.Value ? (string)reader[1] : null,
-                        theaterLocation = reader[2] != DBNull.Value ? (string)reader[2] : null,
+                        theaterLoction = reader[2] != DBNull.Value ? (string)reader[2] : null,
                         theaterMapSite = reader[3] != DBNull.Value ? (string)reader[3] : null,
                         theaterSeatRowsCount = (int)reader[4],
                         theaterSeatColsCount = (int)reader[5]
@@ -230,6 +230,80 @@ namespace TTMSWebAPI.Servers
             }
         }
 
+        ///<summary>
+        /// 更新放映厅
+        /// </summary>
+        /// <param name="cm">更新放映厅名称以及地理位置</param>
+        /// <returns>更新结果</returns>
+        public static object UpdateTheater(UpdateTheaterModel cm)
+        {
+            using (var con = new SqlConnection(Server.SqlConString))
+            {
+                con.Open();
+                
+                var sqlCom = new SqlCommand("sp_UpdateTheater", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                
+                sqlCom.Parameters.AddRange(new []
+                {
+                    new SqlParameter
+                    {
+                        ParameterName = "@theaterId",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.Int,
+                        Value = cm.TheaterId
+                    } ,
+                    new SqlParameter
+                    {
+                        ParameterName = "@theaterName",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.NVarChar,
+                        Size = 30,
+                        Value = cm.TheaterName
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@theaterLocation",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.NVarChar,
+                        Size = 30,
+                        Value = cm.Location
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@theaterMapSite",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.NVarChar,
+                        Size = 30,
+                        Value = cm.MapSite
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@message",
+                        Direction = ParameterDirection.Output,
+                        Size = 30,
+                        SqlDbType = SqlDbType.VarChar
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@return",
+                        Direction = ParameterDirection.ReturnValue,
+                        SqlDbType = SqlDbType.Int
+                    }
+                });
+
+                sqlCom.ExecuteNonQuery();
+
+                return new
+                {
+                    result = (int) sqlCom.Parameters["@return"].Value,
+                    msg = (string) sqlCom.Parameters["@message"].Value
+                };
+            }
+        }
+        
         /// <summary>
         /// 删除一个演出厅
         /// </summary>
