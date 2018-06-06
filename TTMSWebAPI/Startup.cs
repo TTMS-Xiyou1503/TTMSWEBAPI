@@ -3,6 +3,7 @@ using System.IO;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -65,13 +66,18 @@ namespace TTMSWebAPI
                 options.IdleTimeout = TimeSpan.FromDays(15);
                 options.Cookie.Name = ".TTMS.Session";
                 options.Cookie.HttpOnly = false;
-                options.Cookie.Domain = ".ksgin.online";
-                options.Cookie.Path = "/";
+//                options.Cookie.Domain = ".ksgin.online";
+//                options.Cookie.Path = "/";
             });
 
             //doc
             // Add our repository type
             services.AddSingleton<HttpGetAttribute, HttpGetAttribute>();
+
+//            services.Configure<CookiePolicyOptions>(option =>
+//            {
+//                
+//            });
 
             // Register the Swagger generator, defining one or more Swagger documents
             services.AddSwaggerGen(c =>
