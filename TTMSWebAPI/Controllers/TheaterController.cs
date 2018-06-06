@@ -135,6 +135,47 @@ namespace TTMSWebAPI.Controllers
                 };
             }
         }
+        
+        /// <summary>
+        /// 更新放映厅
+        /// </summary>
+        /// <param name="um">更新放映厅模型</param>
+        /// <returns>更新结果</returns>
+        [HttpPatch("[Action]")]
+        [HttpPost("[action]")]
+        public object UpdateTheater([FromBody] UpdateTheaterModel um)
+        {
+            try
+            {
+//                var addr = Server.GetUserIp(Request.HttpContext);
+//                if (Server.IpHandle(addr) == 0)
+//                {
+//                    return new[] { "your ip can't using our api , please contact administrator" };
+//                }
+//
+//                var account = HttpContext.Session.GetString("user_account");
+//
+//                if (account == null)
+//                {
+//                    return new
+//                    {
+//                        result = 401,
+//                        msg = "not login"
+//                    };
+//                }
+                var re = TheaterServer.UpdateTheater(um);
+
+                return re;
+            }
+            catch (Exception e)
+            {
+                return new
+                {
+                    result = e.HResult ,
+                    msg = e.Message
+                };
+            }
+        }
 
         /// <summary>
         /// 删除一个演出厅
