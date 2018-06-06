@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6d56ab6-32d0-48fc-ad4c-43e489dbc839" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TTMSWebAPI/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TTMSWebAPI/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TTMSWebAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TTMSWebAPI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TTMSWebAPI/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TTMSWebAPI/Controllers/HomeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TTMSWebAPI/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TTMSWebAPI/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TTMSWebAPI/TTMSWebAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TTMSWebAPI/TTMSWebAPI.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TTMSWebAPI/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/TTMSWebAPI/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -406,7 +402,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HomeController.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="HomeController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TTMSWebAPI/Controllers/HomeController.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="335">
@@ -423,6 +419,15 @@
                 <marker date="1528263634657" expanded="true" signature="704:1034" ph="{...}" />
                 <marker date="1528263634657" expanded="true" signature="1064:1121" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/TTMSWebAPI/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -544,6 +549,7 @@
         <option value="$PROJECT_DIR$/TTMSWebAPI/Servers/Server.cs" />
         <option value="$PROJECT_DIR$/TTMSWebAPI/Startup.cs" />
         <option value="$PROJECT_DIR$/TTMSWebAPI/Controllers/HomeController.cs" />
+        <option value="$PROJECT_DIR$/TTMSWebAPI/README.md" />
       </list>
     </option>
   </component>
@@ -760,7 +766,7 @@
       <workItem from="1528075908128" duration="229000" />
       <workItem from="1528076260743" duration="3553000" />
       <workItem from="1528169537031" duration="1789000" />
-      <workItem from="1528207951571" duration="11336000" />
+      <workItem from="1528207951571" duration="11373000" />
     </task>
     <task id="LOCAL-00001" summary="提交">
       <created>1493343032355</created>
@@ -780,7 +786,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135153000" />
+    <option name="totallyTimeSpent" value="135190000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -793,6 +799,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Errors In Solution" order="3" />
@@ -800,11 +807,11 @@
       <window_info anchor="bottom" id="Unit Tests" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="REST Client" order="8" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6609375" visible="true" weight="0.32219252" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6609375" visible="true" weight="0.32219252" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="NuGet" order="7" sideWeight="0.65625" weight="0.28743315" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.203125" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.203125" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Build" order="7" sideWeight="0.4953125" weight="0.328877" />
       <window_info anchor="right" id="Database" order="3" />
@@ -989,13 +996,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1908">
           <caret line="106" column="16" selection-start-line="106" selection-start-column="16" selection-end-line="106" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TTMSWebAPI/README.md">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
@@ -1707,6 +1707,13 @@
             <marker date="1528263634657" expanded="true" signature="704:1034" ph="{...}" />
             <marker date="1528263634657" expanded="true" signature="1064:1121" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TTMSWebAPI/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
