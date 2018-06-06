@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6d56ab6-32d0-48fc-ad4c-43e489dbc839" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/TTMSWebAPI/Servers/TheaterServer.cs" afterPath="$PROJECT_DIR$/TTMSWebAPI/Servers/TheaterServer.cs" />
-    </list>
+    <list default="true" id="e6d56ab6-32d0-48fc-ad4c-43e489dbc839" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -281,13 +279,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TheaterController.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TheaterController.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TTMSWebAPI/Controllers/TheaterController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4860">
+            <state relative-caret-position="-679">
               <caret line="167" column="55" lean-forward="false" selection-start-line="167" selection-start-column="55" selection-end-line="167" selection-end-column="55" />
               <folding>
                 <marker date="1528277790435" expanded="false" signature="6:162" ph="..." />
+                <marker date="1528277790435" expanded="true" signature="196:6085" ph="{...}" />
                 <marker date="1528277790435" expanded="true" signature="203:252" ph="/// 放映厅操作API ... " />
                 <marker date="1528277790435" expanded="true" signature="354:6083" ph="{...}" />
                 <marker date="1528277790435" expanded="true" signature="369:456" ph="/// 获得所有影厅 ... " />
@@ -335,10 +334,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TheaterServer.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TheaterServer.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TTMSWebAPI/Servers/TheaterServer.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="758">
+            <state relative-caret-position="1448">
               <caret line="275" column="49" lean-forward="false" selection-start-line="275" selection-start-column="49" selection-end-line="275" selection-end-column="49" />
               <folding>
                 <marker date="1528289841872" expanded="false" signature="6:120" ph="..." />
@@ -780,7 +779,7 @@
       <workItem from="1528245567251" duration="2610000" />
       <workItem from="1528248940025" duration="4426000" />
       <workItem from="1528255702318" duration="4523000" />
-      <workItem from="1528278834097" duration="1245000" />
+      <workItem from="1528278834097" duration="1838000" />
     </task>
     <task id="LOCAL-00001" summary="提交">
       <created>1493343032355</created>
@@ -793,7 +792,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134285000" />
+    <option name="totallyTimeSpent" value="134878000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -806,18 +805,18 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47400242" sideWeight="0.5028612" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47400242" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.47400242" sideWeight="0.49713877" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.75774646" sideWeight="0.49713877" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17453505" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -827,7 +826,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1848,58 +1846,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TTMSWebAPI/Controllers/TheaterController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4860">
-          <caret line="167" column="55" lean-forward="false" selection-start-line="167" selection-start-column="55" selection-end-line="167" selection-end-column="55" />
-          <folding>
-            <marker date="1528277790435" expanded="false" signature="6:162" ph="..." />
-            <marker date="1528277790435" expanded="true" signature="203:252" ph="/// 放映厅操作API ... " />
-            <marker date="1528277790435" expanded="true" signature="354:6083" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="369:456" ph="/// 获得所有影厅 ... " />
-            <marker date="1528277790435" expanded="true" signature="502:1408" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="528:1198" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="656:791" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="907:1099" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="977:1080" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="1230:1398" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="1288:1383" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="1418:1552" ph="/// 查询影厅 ... " />
-            <marker date="1528277790435" expanded="true" signature="1644:2558" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="1670:2348" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="1798:1933" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="2049:2241" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="2119:2222" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="2380:2548" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="2438:2533" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="2568:2704" ph="/// 创建一个新演出厅 ... " />
-            <marker date="1528277790435" expanded="true" signature="2805:3713" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="2831:3503" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="2959:3094" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="3210:3402" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="3280:3383" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="3535:3703" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="3593:3688" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="3731:3866" ph="/// 更新放映厅 ... " />
-            <marker date="1528277790435" expanded="true" signature="3999:4942" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="4025:4731" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="4170:4305" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="4421:4614" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="4491:4595" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="4763:4932" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="4821:4917" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="4952:5087" ph="/// 删除一个演出厅 ... " />
-            <marker date="1528277790435" expanded="true" signature="5169:6077" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="5195:5867" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="5323:5458" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="5574:5766" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="5644:5747" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="5899:6067" ph="{...}" />
-            <marker date="1528277790435" expanded="true" signature="5957:6052" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TTMSWebAPI/Servers/SeatServer.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7560">
@@ -2079,7 +2025,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TTMSWebAPI/Servers/TheaterServer.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="758">
+        <state relative-caret-position="1448">
           <caret line="275" column="49" lean-forward="false" selection-start-line="275" selection-start-column="49" selection-end-line="275" selection-end-column="49" />
           <folding>
             <marker date="1528289841872" expanded="false" signature="6:120" ph="..." />
@@ -2141,6 +2087,59 @@
             <marker date="1528289841872" expanded="true" signature="11574:11801" ph="{...}" />
             <marker date="1528289841872" expanded="true" signature="11860:12052" ph="{...}" />
             <marker date="1528289841872" expanded="true" signature="12160:12319" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TTMSWebAPI/Controllers/TheaterController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-679">
+          <caret line="167" column="55" lean-forward="false" selection-start-line="167" selection-start-column="55" selection-end-line="167" selection-end-column="55" />
+          <folding>
+            <marker date="1528277790435" expanded="false" signature="6:162" ph="..." />
+            <marker date="1528277790435" expanded="true" signature="196:6085" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="203:252" ph="/// 放映厅操作API ... " />
+            <marker date="1528277790435" expanded="true" signature="354:6083" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="369:456" ph="/// 获得所有影厅 ... " />
+            <marker date="1528277790435" expanded="true" signature="502:1408" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="528:1198" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="656:791" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="907:1099" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="977:1080" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="1230:1398" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="1288:1383" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="1418:1552" ph="/// 查询影厅 ... " />
+            <marker date="1528277790435" expanded="true" signature="1644:2558" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="1670:2348" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="1798:1933" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="2049:2241" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="2119:2222" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="2380:2548" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="2438:2533" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="2568:2704" ph="/// 创建一个新演出厅 ... " />
+            <marker date="1528277790435" expanded="true" signature="2805:3713" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="2831:3503" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="2959:3094" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="3210:3402" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="3280:3383" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="3535:3703" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="3593:3688" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="3731:3866" ph="/// 更新放映厅 ... " />
+            <marker date="1528277790435" expanded="true" signature="3999:4942" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="4025:4731" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="4170:4305" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="4421:4614" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="4491:4595" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="4763:4932" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="4821:4917" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="4952:5087" ph="/// 删除一个演出厅 ... " />
+            <marker date="1528277790435" expanded="true" signature="5169:6077" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="5195:5867" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="5323:5458" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="5574:5766" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="5644:5747" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="5899:6067" ph="{...}" />
+            <marker date="1528277790435" expanded="true" signature="5957:6052" ph="{...}" />
           </folding>
         </state>
       </provider>
