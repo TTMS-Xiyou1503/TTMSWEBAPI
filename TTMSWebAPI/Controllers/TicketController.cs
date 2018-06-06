@@ -23,22 +23,22 @@ namespace TTMSWebAPI.Controllers
         {
             try
             {
-                var addr = Server.GetUserIp(Request.HttpContext);
-                if (Server.IpHandle(addr) == 0)
-                {
-                    return new[] { "your ip can't using our api , please contact administrator" };
-                }
-
-                var account = HttpContext.Session.GetString("user_account");
-
-                if (account == null)
-                {
-                    return new
-                    {
-                        result = 401,
-                        msg = "not login"
-                    };
-                }
+//                var addr = Server.GetUserIp(Request.HttpContext);
+//                if (Server.IpHandle(addr) == 0)
+//                {
+//                    return new[] { "your ip can't using our api , please contact administrator" };
+//                }
+//
+//                var account = HttpContext.Session.GetString("user_account");
+//
+//                if (account == null)
+//                {
+//                    return new
+//                    {
+//                        result = 401,
+//                        msg = "not login"
+//                    };
+//                }
 
                 var re = TicketServer.QueryTicket(id);
 
@@ -64,22 +64,22 @@ namespace TTMSWebAPI.Controllers
         {
             try
             {
-                var addr = Server.GetUserIp(Request.HttpContext);
-                if (Server.IpHandle(addr) == 0)
-                {
-                    return new[] { "your ip can't using our api , please contact administrator" };
-                }
-
-                var account = HttpContext.Session.GetString("user_account");
-
-                if (account == null)
-                {
-                    return new
-                    {
-                        result = 401,
-                        msg = "not login"
-                    };
-                }
+//                var addr = Server.GetUserIp(Request.HttpContext);
+//                if (Server.IpHandle(addr) == 0)
+//                {
+//                    return new[] { "your ip can't using our api , please contact administrator" };
+//                }
+//
+//                var account = HttpContext.Session.GetString("user_account");
+//
+//                if (account == null)
+//                {
+//                    return new
+//                    {
+//                        result = 401,
+//                        msg = "not login"
+//                    };
+//                }
 
                 var re = TicketServer.SelectTicket(goodId);
 
@@ -105,22 +105,22 @@ namespace TTMSWebAPI.Controllers
         {
             try
             {
-                var addr = Server.GetUserIp(Request.HttpContext);
-                if (Server.IpHandle(addr) == 0)
-                {
-                    return new[] { "your ip can't using our api , please contact administrator" };
-                }
-
-                var account = HttpContext.Session.GetString("user_account");
-
-                if (account == null)
-                {
-                    return new
-                    {
-                        result = 401,
-                        msg = "not login"
-                    };
-                }
+//                var addr = Server.GetUserIp(Request.HttpContext);
+//                if (Server.IpHandle(addr) == 0)
+//                {
+//                    return new[] { "your ip can't using our api , please contact administrator" };
+//                }
+//
+//                var account = HttpContext.Session.GetString("user_account");
+//
+//                if (account == null)
+//                {
+//                    return new
+//                    {
+//                        result = 401,
+//                        msg = "not login"
+//                    };
+//                }
 
                 var re = TicketServer.SellTicket(ticketId);
 
@@ -147,22 +147,22 @@ namespace TTMSWebAPI.Controllers
         {
             try
             {
-                var addr = Server.GetUserIp(Request.HttpContext);
-                if (Server.IpHandle(addr) == 0)
-                {
-                    return new[] { "your ip can't using our api , please contact administrator" };
-                }
-
-                var account = HttpContext.Session.GetString("user_account");
-
-                if (account == null)
-                {
-                    return new
-                    {
-                        result = 401,
-                        msg = "not login"
-                    };
-                }
+//                var addr = Server.GetUserIp(Request.HttpContext);
+//                if (Server.IpHandle(addr) == 0)
+//                {
+//                    return new[] { "your ip can't using our api , please contact administrator" };
+//                }
+//
+//                var account = HttpContext.Session.GetString("user_account");
+//
+//                if (account == null)
+//                {
+//                    return new
+//                    {
+//                        result = 401,
+//                        msg = "not login"
+//                    };
+//                }
 
                 var re = TicketServer.PayTicket(ticketId, userId);
 
@@ -189,22 +189,22 @@ namespace TTMSWebAPI.Controllers
         {
             try
             {
-                var addr = Server.GetUserIp(Request.HttpContext);
-                if (Server.IpHandle(addr) == 0)
-                {
-                    return new[] { "your ip can't using our api , please contact administrator" };
-                }
-
-                var account = HttpContext.Session.GetString("user_account");
-
-                if (account == null)
-                {
-                    return new
-                    {
-                        result = 401,
-                        msg = "not login"
-                    };
-                }
+//                var addr = Server.GetUserIp(Request.HttpContext);
+//                if (Server.IpHandle(addr) == 0)
+//                {
+//                    return new[] { "your ip can't using our api , please contact administrator" };
+//                }
+//
+//                var account = HttpContext.Session.GetString("user_account");
+//
+//                if (account == null)
+//                {
+//                    return new
+//                    {
+//                        result = 401,
+//                        msg = "not login"
+//                    };
+//                }
 
                 var re = TicketServer.ReturnedTicket(ticketId, userId);
 

@@ -15,13 +15,12 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore" Version="2.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.CookiePolicy" Version="2.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.1.0">
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.1.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer.Design" Version="2.0.0-preview1-final" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.0" />
     <PackageReference Include="Microsoft.Extensions.Caching.SqlServer" Version="2.1.0">
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.1.0" />
@@ -29,17 +28,16 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Cors" Version="2.1.0" />
     <PackageReference Include="Microsoft.Extensions.PlatformAbstractions" Version="1.1.0" />
     <PackageReference Include="runtime.osx-x64.Microsoft.NETCore.App" Version="2.1.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="2.4.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="2.4.0">
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="2.5.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="2.5.0">
     </PackageReference>
-    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="2.4.0">
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="2.5.0">
     </PackageReference>
-    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="2.4.0">
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="2.5.0">
     </PackageReference>
     <PackageReference Include="System.Data.SqlClient" Version="4.5.0">
     </PackageReference>
-    <PackageReference Include="ZKWeb.System.Drawing" Version="4.0.1">
-    </PackageReference>
+    <PackageReference Include="System.Drawing.Common" Version="4.5.0" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Extensions.PlatformAbstractions, Version=1.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60">
