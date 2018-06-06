@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data.SqlClient;
-using System.DrawingCore;
-using System.DrawingCore.Imaging;
+using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using Microsoft.AspNetCore.Http;

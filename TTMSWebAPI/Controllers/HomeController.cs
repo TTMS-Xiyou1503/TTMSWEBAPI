@@ -34,9 +34,11 @@ namespace TTMSWebAPI.Controllers
             {
                 var verCode = Server.VerCode();
 
-                HttpContext.Session.SetString("user_verCode" , verCode.code);
+//                HttpContext.Session.SetString("user_verCode" , verCode.code);
+                
+                Console.WriteLine(verCode);
 
-                return Server.VerCode();
+                return verCode;
             }
             catch (Exception)
             {
