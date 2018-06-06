@@ -1,7 +1,6 @@
-﻿# TTMSWebAPI
+# TTMSWebAPI
 
-[主页地址](http://api.ksgin.online/home)
+[主页地址](http://123.206.82.241/home)
 
 ---
-&emsp;&emsp;项目已完成，短期内不再更新，并且在一月后将关闭服务器。如有需要可自行下载编译
-
+&emsp;&emsp;大三课设期间，不断更新 2018.6.3 - 2018.6.16
