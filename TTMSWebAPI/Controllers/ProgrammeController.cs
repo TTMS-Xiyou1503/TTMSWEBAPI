@@ -229,40 +229,58 @@ namespace TTMSWebAPI.Controllers
         /// <returns>更新结果</returns>
         [HttpPatch("[Action]")]
         [HttpPost("[action]")]
-        public object UpdateTheater([FromBody] UpdateProgrammeModel um,[FromServices] IHostingEnvironment env)
+        public object UpdateTheater([FromServices] IHostingEnvironment env)
         {
             try
             {
-                var file = Request.Form.Files[0];
+//                var addr = Server.GetUserIp(Request.HttpContext);
+//                if (Server.IpHandle(addr) == 0)
+//                {
+//                    return new[] {"your ip can't using our api , please contact administrator"};
+//                }
+//
+//                var account = HttpContext.Session.GetString("user_account");
+//
+//                if (account == null)
+//                {
+//                    return new
+//                    {
+//                        result = 401,
+//                        msg = "not login"
+//                    };
+//                }
+
+                var files = Request.Form.Files;
+                var programmeId = int.Parse(Request.Form.First(c => c.Key == "programmeId").value);
+                var programmeName = Request.Form.First(c => c.Key == "programmeName").Value;
+                var duration = int.Parse(Request.Form.First(c => c.Key == "duration").Value);
+                var profile = Request.Form.First(c => c.Key == "profile").Value;
+                var tags = Request.Form.First(c => c.Key == "tags").Value;
+
+                var file = files[0];
                 var fileName = DateTime.Now.Ticks + ContentDispositionHeaderValue
                                    .Parse(file.ContentDisposition)
                                    .FileName
                                    .Trim().Value;
-                //var filePath = env.WebRootPath + @"./PlayBill/" +  DateTime.Now.Ticks + $@"{fileName}"; // in unix
-                var filePath = env .WebRootPath + @".\PlayBill\" +  $@"{fileName}"; // in windows
+                //var imagePath = env.WebRootPath + @"./PlayBill/" +  DateTime.Now.Ticks + $@"{fileName}"; // in unix
+                var imagePath = env.WebRootPath + @".\PlayBill\" + $@"{fileName}"; // in windows
 
-                using (var fs = System.IO.File.Create(filePath))
+                var cm = new UpdateProgrammeModel
+                {
+                    ProgrammeId = programmeId,
+                    ProgrammeName = programmeName,
+                    Duration = duration,
+                    Profile = profile,
+                    Tags = tags
+                };
+
+                using (var fs = System.IO.File.Create(imagePath))
                 {
                     file.CopyTo(fs);
                     fs.Flush();
                 }
-                var addr = Server.GetUserIp(Request.HttpContext);
-                if (Server.IpHandle(addr) == 0)
-                {
-                    return new[] { "your ip can't using our api , please contact administrator" };
-                }
 
-                var account = HttpContext.Session.GetString("user_account");
-
-                if (account == null)
-                {
-                    return new
-                    {
-                        result = 401,
-                        msg = "not login"
-                    };
-                }
-                var re = ProgrammeServer.UpdateProgramme(um,fileName);
+                var re = ProgrammeServer.UpdateAndPlayBill(cm, imagePath);
 
                 return re;
             }
@@ -270,7 +288,7 @@ namespace TTMSWebAPI.Controllers
             {
                 return new
                 {
-                    result = e.HResult ,
+                    result = e.HResult,
                     msg = e.Message
                 };
             }

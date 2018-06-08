@@ -54,9 +54,6 @@ namespace TTMSWebAPI.Models
         /// 剧目简介
         /// </summary>
         public string Profile { get; set; }
-        /// <summary>
-        /// 海报地址
-        /// </summary>
-        public string filePath { get; set; }
+        
     }
 }

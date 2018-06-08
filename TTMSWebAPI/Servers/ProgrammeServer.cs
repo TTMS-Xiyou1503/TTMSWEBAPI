@@ -346,7 +346,7 @@ namespace TTMSWebAPI.Servers
         /// </summary>
         /// <param name="cm">更新剧目各种信息</param>
         /// <returns>更新结果</returns>
-        public static object UpdateProgramme(UpdateProgrammeModel cm,string filePath)
+        public static object UpdateAndPlayBill(UpdateProgrammeModel cm,string filePath)
         {
             using (var con = new SqlConnection(Server.SqlConString))
             {
