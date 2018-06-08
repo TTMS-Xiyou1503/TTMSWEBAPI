@@ -293,6 +293,88 @@ namespace TTMSWebAPI.Servers
         }
 
         /// <summary>
+        /// 新建一个剧目
+        /// </summary>
+        /// <param name="cm">新建剧目模型</param>
+        /// <param name="imagePath">海报图片地址</param>
+        /// <returns>新建结果</returns>
+        public static object CreateProgrammeAndPlayBill(CreateProgrammeModel cm , string imagePath)
+        {
+            using (var con = new SqlConnection(Server.SqlConString))
+            {
+                con.Open();
+
+                var sqlCom = new SqlCommand("sp_CreateProgrammeAndPlayBill", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                sqlCom.Parameters.AddRange(new[]
+                {
+                    new SqlParameter
+                    {
+                        ParameterName = "@proName",
+                        Direction = ParameterDirection.Input,
+                        Size = 50,
+                        SqlDbType = SqlDbType.NVarChar,
+                        Value = cm.ProgrammeName
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@duration",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.Int,
+                        Value = cm.Duration
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@tags",
+                        Direction = ParameterDirection.Input,
+                        Size = 20,
+                        SqlDbType = SqlDbType.NVarChar,
+                        Value = cm.Tags
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@profile",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.Text,
+                        Value = cm.Profile
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@imagePath",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.VarChar,
+                        Size = 100 ,
+                        Value = imagePath
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@message",
+                        Direction = ParameterDirection.Output,
+                        Size = 30,
+                        SqlDbType = SqlDbType.VarChar
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@return",
+                        Direction = ParameterDirection.ReturnValue,
+                        SqlDbType = SqlDbType.Int
+                    }
+                });
+
+                sqlCom.ExecuteNonQuery();
+
+                return new
+                {
+                    result = (int) sqlCom.Parameters["@return"].Value,
+                    msg = (string) sqlCom.Parameters["@message"].Value
+                };
+            }
+        }
+
+        /// <summary>
         /// 删除一个剧目
         /// </summary>
         /// <param name="id">剧目Id</param>
