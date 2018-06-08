@@ -3,7 +3,7 @@
   <component name="ContentModelStore">
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
-      <e p="TTMSWEBAPI" t="IncludeRecursive">
+      <e p="TTMSWebAPI" t="IncludeRecursive">
         <e p=".gitignore" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
@@ -29,7 +29,7 @@
           <e p="VerCodeModel.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
+          <e p="Release" t="Include">
             <e p="netcoreapp2.0" t="Include">
               <e p="TTMSWebAPI.AssemblyInfo.cs" t="Include" />
             </e>
@@ -57,7 +57,7 @@
       </e>
       <e p="TTMSWebAPI.sln" t="IncludeFlat" />
     </e>
-    <e p="$USER_HOME$/Library/Caches/Rider2017.3/resharper-host/local/Transient/ReSharperHost/v11/SolutionCaches/_TTMSWebAPI.2000686776.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2018.1/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_TTMSWebAPI.83879857.00" t="ExcludeRecursive" />
   </component>
   <component name="RiderRiderContentModelStore">
     <excludedPaths />

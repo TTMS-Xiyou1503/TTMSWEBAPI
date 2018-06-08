@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Linq;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -274,11 +275,11 @@ namespace TTMSWebAPI.Controllers
             {
                 var file = Request.Form.Files[0];
                 var fileName = DateTime.Now.Ticks + ContentDispositionHeaderValue
-                    .Parse(file.ContentDisposition)
-                    .FileName
-                    .Trim().Value;
+                                   .Parse(file.ContentDisposition)
+                                   .FileName
+                                   .Trim().Value;
                 //var filePath = env.WebRootPath + @"./PlayBill/" +  DateTime.Now.Ticks + $@"{fileName}"; // in unix
-                var filePath = env.WebRootPath + @".\PlayBill\" +  $@"{fileName}"; // in windows
+                var filePath = env.WebRootPath + @".\PlayBill\" + $@"{fileName}"; // in windows
 
                 using (var fs = System.IO.File.Create(filePath))
                 {
@@ -308,7 +309,7 @@ namespace TTMSWebAPI.Controllers
         /// <param name="cm">待新建的剧目</param>
         /// <returns>新建结果</returns>
         [HttpPost("[action]")]
-        public object CreateProgramme([FromServices] IHostingEnvironment env,[FromBody] CreateProgrammeModel cm)
+        public object CreateProgramme([FromServices] IHostingEnvironment env, [FromBody] CreateProgrammeModel cm)
         {
             try
             {
@@ -328,8 +329,77 @@ namespace TTMSWebAPI.Controllers
 //                        msg = "not login"
 //                    };
 //                }
-                
+
                 var re = ProgrammeServer.CreateProgramme(cm);
+
+                return re;
+            }
+            catch (Exception e)
+            {
+                return new
+                {
+                    result = e.HResult,
+                    msg = e.Message
+                };
+            }
+        }
+
+        /// <summary>
+        /// 新建剧目（同时上传海报）
+        /// </summary>
+        /// <param name="env">系统</param>
+        /// <returns>新建结果</returns>
+        [HttpPost("[action]")]
+        public object CreateProgrammeAndPlayBill([FromServices] IHostingEnvironment env)
+        {
+            try
+            {
+//                var addr = Server.GetUserIp(Request.HttpContext);
+//                if (Server.IpHandle(addr) == 0)
+//                {
+//                    return new[] {"your ip can't using our api , please contact administrator"};
+//                }
+//
+//                var account = HttpContext.Session.GetString("user_account");
+//
+//                if (account == null)
+//                {
+//                    return new
+//                    {
+//                        result = 401,
+//                        msg = "not login"
+//                    };
+//                }
+
+                var files = Request.Form.Files;
+                var programmeName = Request.Form.First(c => c.Key == "programmeName").Value;
+                var duration = int.Parse(Request.Form.First(c => c.Key == "duration").Value);
+                var profile = Request.Form.First(c => c.Key == "profile").Value;
+                var tags = Request.Form.First(c => c.Key == "tags").Value;
+
+                var file = files[0];
+                var fileName = DateTime.Now.Ticks + ContentDispositionHeaderValue
+                                   .Parse(file.ContentDisposition)
+                                   .FileName
+                                   .Trim().Value;
+                //var imagePath = env.WebRootPath + @"./PlayBill/" +  DateTime.Now.Ticks + $@"{fileName}"; // in unix
+                var imagePath = env.WebRootPath + @".\PlayBill\" + $@"{fileName}"; // in windows
+
+                var cm = new CreateProgrammeModel
+                {
+                    ProgrammeName = programmeName,
+                    Duration = duration,
+                    Profile = profile,
+                    Tags = tags
+                };
+
+                using (var fs = System.IO.File.Create(imagePath))
+                {
+                    file.CopyTo(fs);
+                    fs.Flush();
+                }
+
+                var re = ProgrammeServer.CreateProgrammeAndPlayBill(cm, imagePath);
 
                 return re;
             }
