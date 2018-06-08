@@ -26,4 +26,37 @@ namespace TTMSWebAPI.Models
         /// </summary>
         public string Profile { get; set; }
     }
+
+    /// <summary>
+    /// 剧目更新
+    /// </summary>
+    public class UpdateProgrammeModel
+    {
+        ///<summary>
+        /// 剧目ID
+        /// </summary>
+        public int ProgrammeId { get; set; }
+        /// <summary>
+        /// 剧目名称
+        /// </summary>
+        [StringLength(50)]
+        public string ProgrammeName { get; set; }
+        /// <summary>
+        /// 剧目时长
+        /// </summary>
+        public int Duration { get; set; }
+        /// <summary>
+        /// 剧目标签
+        /// </summary>
+        [StringLength(20)]
+        public string Tags { get; set; }
+        /// <summary>
+        /// 剧目简介
+        /// </summary>
+        public string Profile { get; set; }
+        /// <summary>
+        /// 海报地址
+        /// </summary>
+        public string filePath { get; set; }
+    }
 }

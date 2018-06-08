@@ -179,6 +179,8 @@ namespace TTMSWebAPI.Controllers
             }
         }
 
+        
+        
         /// <summary>
         /// 查询具体剧目信息
         /// </summary>
@@ -219,7 +221,60 @@ namespace TTMSWebAPI.Controllers
                 };
             }
         }
+        
+        /// <summary>
+        /// 更新剧目
+        /// </summary>
+        /// <param name="um">更新剧目模型</param>
+        /// <returns>更新结果</returns>
+        [HttpPatch("[Action]")]
+        [HttpPost("[action]")]
+        public object UpdateTheater([FromBody] UpdateProgrammeModel um,[FromServices] IHostingEnvironment env)
+        {
+            try
+            {
+                var file = Request.Form.Files[0];
+                var fileName = DateTime.Now.Ticks + ContentDispositionHeaderValue
+                                   .Parse(file.ContentDisposition)
+                                   .FileName
+                                   .Trim().Value;
+                //var filePath = env.WebRootPath + @"./PlayBill/" +  DateTime.Now.Ticks + $@"{fileName}"; // in unix
+                var filePath = env .WebRootPath + @".\PlayBill\" +  $@"{fileName}"; // in windows
 
+                using (var fs = System.IO.File.Create(filePath))
+                {
+                    file.CopyTo(fs);
+                    fs.Flush();
+                }
+                var addr = Server.GetUserIp(Request.HttpContext);
+                if (Server.IpHandle(addr) == 0)
+                {
+                    return new[] { "your ip can't using our api , please contact administrator" };
+                }
+
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
+                var re = ProgrammeServer.UpdateProgramme(um,fileName);
+
+                return re;
+            }
+            catch (Exception e)
+            {
+                return new
+                {
+                    result = e.HResult ,
+                    msg = e.Message
+                };
+            }
+        }
         /// <summary>
         /// 使用剧目标签筛选剧目
         /// </summary>
