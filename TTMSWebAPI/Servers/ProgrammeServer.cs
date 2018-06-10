@@ -345,6 +345,7 @@ namespace TTMSWebAPI.Servers
         /// 更新剧目
         /// </summary>
         /// <param name="cm">更新剧目各种信息</param>
+        /// <param name="filePath">图片路径</param>
         /// <returns>更新结果</returns>
         public static object UpdateAndPlayBill(UpdateProgrammeModel cm,string filePath)
         {

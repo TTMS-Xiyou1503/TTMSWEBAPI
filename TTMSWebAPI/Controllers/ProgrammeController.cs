@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using System.Linq;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -225,9 +226,8 @@ namespace TTMSWebAPI.Controllers
         /// <summary>
         /// 更新剧目
         /// </summary>
-        /// <param name="um">更新剧目模型</param>
+        /// <param name="env">更新剧目模型</param>
         /// <returns>更新结果</returns>
-        [HttpPatch("[Action]")]
         [HttpPost("[action]")]
         public object UpdateTheater([FromServices] IHostingEnvironment env)
         {
@@ -251,7 +251,7 @@ namespace TTMSWebAPI.Controllers
 //                }
 
                 var files = Request.Form.Files;
-                var programmeId = int.Parse(Request.Form.First(c => c.Key == "programmeId").value);
+                var programmeId = int.Parse(Request.Form.First(c => c.Key == "programmeId").Value);
                 var programmeName = Request.Form.First(c => c.Key == "programmeName").Value;
                 var duration = int.Parse(Request.Form.First(c => c.Key == "duration").Value);
                 var profile = Request.Form.First(c => c.Key == "profile").Value;
@@ -293,6 +293,7 @@ namespace TTMSWebAPI.Controllers
                 };
             }
         }
+        
         /// <summary>
         /// 使用剧目标签筛选剧目
         /// </summary>
