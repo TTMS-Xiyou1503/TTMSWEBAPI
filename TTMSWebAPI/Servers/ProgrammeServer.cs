@@ -62,6 +62,7 @@ namespace TTMSWebAPI.Servers
                         programmeDruation = (int) reader[2],
                         programmeTags = (string) reader[3],
                         programmeProfile = (string) reader[4]
+                        
                     });
                 }
 
@@ -73,7 +74,72 @@ namespace TTMSWebAPI.Servers
                 };
             }
         }
+        
+        /// <summary>
+        /// 获得所有剧目(附带图片路径)
+        /// </summary>
+        /// <returns>剧目列表</returns>
+        public static object GetAllProgrammeWithImagePath()
+        {
+            using (var con = new SqlConnection(Server.SqlConString))
+            {
+                con.Open();
 
+                var message = "";
+
+                var sqlCom = new SqlCommand("sp_GetAllProgrammeWithImagePath", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                sqlCom.Parameters.AddRange(new[]
+                {
+                    new SqlParameter
+                    {
+                        ParameterName = "@message",
+                        Direction = ParameterDirection.Output,
+                        Size = 30,
+                        SqlDbType = SqlDbType.VarChar,
+                        Value = message
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@return",
+                        Direction = ParameterDirection.ReturnValue,
+                        SqlDbType = SqlDbType.Int
+                    }
+                });
+
+                sqlCom.ExecuteNonQuery();
+
+                var msg = (string) sqlCom.Parameters["@message"].Value;
+
+                var data = new List<object>();
+
+                var reader = sqlCom.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    data.Add(new
+                    {
+                        programmeId = (int) reader[0],
+                        programmeName = (string) reader[1],
+                        programmeDruation = (int) reader[2],
+                        programmeTags = (string) reader[3],
+                        programmeProfile = (string) reader[4],
+                        programmeImagePath = (string) reader[5]
+                    });
+                }
+
+                return new
+                {
+                    result = (int) sqlCom.Parameters["@return"].Value,
+                    msg,
+                    data
+                };
+            }
+        }
+        
         /// <summary>
         /// 查询剧目信息
         /// </summary>
@@ -266,6 +332,88 @@ namespace TTMSWebAPI.Servers
                         Direction = ParameterDirection.Input,
                         SqlDbType = SqlDbType.Text,
                         Value = cm.Profile
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@message",
+                        Direction = ParameterDirection.Output,
+                        Size = 30,
+                        SqlDbType = SqlDbType.VarChar
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@return",
+                        Direction = ParameterDirection.ReturnValue,
+                        SqlDbType = SqlDbType.Int
+                    }
+                });
+
+                sqlCom.ExecuteNonQuery();
+
+                return new
+                {
+                    result = (int) sqlCom.Parameters["@return"].Value,
+                    msg = (string) sqlCom.Parameters["@message"].Value
+                };
+            }
+        }
+
+        /// <summary>
+        /// 新建一个剧目
+        /// </summary>
+        /// <param name="cm">新建剧目模型</param>
+        /// <param name="imagePath">海报图片地址</param>
+        /// <returns>新建结果</returns>
+        public static object CreateProgrammeAndPlayBill(CreateProgrammeModel cm , string imagePath)
+        {
+            using (var con = new SqlConnection(Server.SqlConString))
+            {
+                con.Open();
+
+                var sqlCom = new SqlCommand("sp_CreateProgrammeAndPlayBill", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                sqlCom.Parameters.AddRange(new[]
+                {
+                    new SqlParameter
+                    {
+                        ParameterName = "@proName",
+                        Direction = ParameterDirection.Input,
+                        Size = 50,
+                        SqlDbType = SqlDbType.NVarChar,
+                        Value = cm.ProgrammeName
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@duration",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.Int,
+                        Value = cm.Duration
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@tags",
+                        Direction = ParameterDirection.Input,
+                        Size = 20,
+                        SqlDbType = SqlDbType.NVarChar,
+                        Value = cm.Tags
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@profile",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.Text,
+                        Value = cm.Profile
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@imagePath",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.VarChar,
+                        Size = 100 ,
+                        Value = imagePath
                     },
                     new SqlParameter
                     {

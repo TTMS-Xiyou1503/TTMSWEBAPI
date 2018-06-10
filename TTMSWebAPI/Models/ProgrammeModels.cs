@@ -12,15 +12,18 @@ namespace TTMSWebAPI.Models
         /// </summary>
         [StringLength(50)]
         public string ProgrammeName { get; set; }
+
         /// <summary>
         /// 剧目时长
         /// </summary>
         public int Duration { get; set; }
+
         /// <summary>
         /// 剧目标签
         /// </summary>
         [StringLength(20)]
         public string Tags { get; set; }
+
         /// <summary>
         /// 剧目简介
         /// </summary>

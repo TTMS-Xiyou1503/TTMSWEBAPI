@@ -77,6 +77,73 @@ namespace TTMSWebAPI.Servers
         }
 
         /// <summary>
+        /// 获得所有上架商品(包含影厅名称和剧目名称)
+        /// </summary>
+        /// <returns></returns>
+        public static object GetAllGoodWithName()
+        {
+            using (var con = new SqlConnection(Server.SqlConString))
+            {
+                con.Open();
+
+                var message = "";
+
+                var sqlCom = new SqlCommand("sp_GetAllGoodWithName", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                sqlCom.Parameters.AddRange(new[]
+                {
+                    new SqlParameter
+                    {
+                        ParameterName = "@message",
+                        Direction = ParameterDirection.Output,
+                        Size = 30,
+                        SqlDbType = SqlDbType.VarChar,
+                        Value = message
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@return",
+                        Direction = ParameterDirection.ReturnValue,
+                        SqlDbType = SqlDbType.Int
+                    }
+                });
+
+                sqlCom.ExecuteNonQuery();
+
+                var msg = (string) sqlCom.Parameters["@message"].Value;
+
+                var data = new List<object>();
+
+                var reader = sqlCom.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    data.Add(new
+                    {
+                        goodId = (int) reader[0],
+                        programmeId = (int) reader[1],
+                        theaterId = (int) reader[2],
+                        performance = (string) reader[3],
+                        playDate = (DateTime) reader[4],
+                        price = (decimal) reader[5],
+                        threateName = (string) reader[6],
+                        programme = (string) reader[7]
+                    });
+                }
+
+                return new
+                {
+                    result = (int) sqlCom.Parameters["@return"].Value,
+                    msg,
+                    data
+                };
+            }
+        }
+        
+        /// <summary>
         /// 查询上架商品
         /// </summary>
         /// <param name="goodId">商品ID</param>

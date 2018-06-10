@@ -55,6 +55,46 @@ namespace TTMSWebAPI.Controllers
         }
 
         /// <summary>
+        /// 获得所有商品信息(包含影厅名称和剧目名称)
+        /// </summary>
+        /// <returns>商品列表</returns>
+        [HttpGet("[action]")]
+        public object GetWithName()
+        {
+            try
+            {
+//                var addr = Server.GetUserIp(Request.HttpContext);
+//                if (Server.IpHandle(addr) == 0)
+//                {
+//                    return new[] { "your ip can't using our api , please contact administrator" };
+//                }
+//
+//                var account = HttpContext.Session.GetString("user_account");
+//
+//                if (account == null)
+//                {
+//                    return new
+//                    {
+//                        result = 401,
+//                        msg = "not login"
+//                    };
+//                }
+
+                var re = GoodServer.GetAllGoodWithName();
+
+                return re;
+            }
+            catch (Exception e)
+            {
+                return new
+                {
+                    result = e.HResult,
+                    msg = e.Message
+                };
+            }
+        }
+        
+        /// <summary>
         /// 查询商品信息
         /// </summary>
         /// <param name="goodId">商品ID</param>

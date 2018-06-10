@@ -18,7 +18,7 @@ namespace TTMSWebAPI.Controllers
         /// </summary>
         /// <param name="id">票Id</param>
         /// <returns></returns>
-        [HttpGet("[action]/{Id}")]
+        [HttpGet("[action]/{id}")]
         public object QueryTicket(int id)
         {
             try
