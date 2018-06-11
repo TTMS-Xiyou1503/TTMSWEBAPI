@@ -389,6 +389,94 @@ namespace TTMSWebAPI.Servers
             }
         }
 
+        ///<summary>
+        /// 更新演出计划
+        /// </summary>
+        /// <param name="cm">更新演出计划模型</param>
+        
+        /// <returns>更新结果</returns>
+        public static object UpdateGood(UpdateGoodModel cm)
+        {
+            using (var con = new SqlConnection(Server.SqlConString))
+            {
+                con.Open();
+                
+                var sqlCom = new SqlCommand("sp_UpdateGoodModel", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                
+                sqlCom.Parameters.AddRange(new []
+                {
+                    new SqlParameter
+                    {
+                        ParameterName = "@gooodId",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.Int,
+                        Value = cm.GoodId
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@programmeId",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.Int,
+                        Value = cm.ProgrammeId
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@teatherId",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.Int,
+                        Value = cm.TheaterId
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@performance",
+                        Direction = ParameterDirection.Input,
+                        Size = 10,
+                        SqlDbType = SqlDbType.VarChar,
+                        Value = cm.Performance
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@playdate",
+                        Direction = ParameterDirection.Input,
+                        Size = 15,
+                        SqlDbType = SqlDbType.VarChar,
+                        Value = cm.PlayDate
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@price",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.Int,
+                        Value = cm.Price
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@message",
+                        Direction = ParameterDirection.Output,
+                        Size = 30,
+                        SqlDbType = SqlDbType.VarChar
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@return",
+                        Direction = ParameterDirection.ReturnValue,
+                        SqlDbType = SqlDbType.Int
+                    }
+                });
+
+                sqlCom.ExecuteNonQuery();
+
+                return new
+                {
+                    result = (int) sqlCom.Parameters["@return"].Value,
+                    msg = (string) sqlCom.Parameters["@message"].Value
+                };
+            }
+        }
+        
         /// <summary>
         /// 下架商品
         /// </summary>

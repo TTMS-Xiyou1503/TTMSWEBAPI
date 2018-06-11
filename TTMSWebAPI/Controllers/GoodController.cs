@@ -135,6 +135,48 @@ namespace TTMSWebAPI.Controllers
             }
         }
 
+        ///<summary>
+        /// 更新演出计划
+        /// </summary>
+        /// <param name="cm">演出计划模型</param>
+        ///<returns>更新结果</returns>
+        [HttpPatch("[Action]")]
+        [HttpPost("[action]")]
+        public object UpdateGood([FromBody] UpdateGoodModel cm)
+        {
+            try
+            {
+//                var addr = Server.GetUserIp(Request.HttpContext);
+//                if (Server.IpHandle(addr) == 0)
+//                {
+//                    return new[] { "your ip can't using our api , please contact administrator" };
+//                }
+//
+//                var account = HttpContext.Session.GetString("user_account");
+//
+//                if (account == null)
+//                {
+//                    return new
+//                    {
+//                        result = 401 ,
+//                        msg = "not login"
+//                    };
+//                }
+
+                var re = GoodServer.UpdateGood(cm);
+
+                return re;
+            }
+            catch (Exception e)
+            {
+                return new
+                {
+                    result = e.HResult,
+                    msg = e.Message
+                };
+            }
+        }
+      
         /// <summary>
         /// 筛选商品
         /// </summary>
