@@ -439,7 +439,7 @@ namespace TTMSWebAPI.Servers
                     },
                     new SqlParameter
                     {
-                        ParameterName = "@playdate",
+                        ParameterName = "@playDate",
                         Direction = ParameterDirection.Input,
                         Size = 15,
                         SqlDbType = SqlDbType.VarChar,
