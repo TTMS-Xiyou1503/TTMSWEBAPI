@@ -401,7 +401,7 @@ namespace TTMSWebAPI.Servers
             {
                 con.Open();
                 
-                var sqlCom = new SqlCommand("sp_UpdateGoodModel", con)
+                var sqlCom = new SqlCommand("sp_UpdateGood", con)
                 {
                     CommandType = CommandType.StoredProcedure
                 };
