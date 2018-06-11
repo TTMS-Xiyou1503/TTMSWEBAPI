@@ -56,36 +56,7 @@ namespace TTMSWebAPI.Models
         public string PlayDate { get; set; }
     }
     
-    /// <summary>
-    /// 筛选商品模型(包含影厅名称)
-    /// </summary>
-    public class SelectGoodWithNameModel
-    {
-        /// <summary>
-        /// 剧目ID
-        /// </summary>
-        public int ProgrammeId { get; set; }
-        /// <summary>
-        /// 放映厅ID
-        /// </summary>
-        public int TheaterId { get; set; }
-        ///<summary>
-        /// 放映厅名字
-        /// </summary>
-        [StringLength(30)]
-        public string TheaterName { get; set; }
-        /// <summary>
-        /// 放映场次
-        /// </summary>
-        [StringLength(10)]
-        public string Performance { get; set; }
-        /// <summary>
-        /// 放映日期
-        /// </summary>
-        [StringLength(15)]
-        public string PlayDate { get; set; }
-        
-    }
+    
     
     /// <summary>
     /// 更新节目模型

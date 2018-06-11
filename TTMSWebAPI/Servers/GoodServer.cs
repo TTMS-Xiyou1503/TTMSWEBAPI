@@ -314,7 +314,7 @@ namespace TTMSWebAPI.Servers
         /// 筛选上架商品(包含影厅名称)
         /// </summary>
         /// <returns></returns>
-        public static object SelectGoodWithName(SelectGoodWithNameModel sgm)
+        public static object SelectGoodWithName(SelectGoodModel sgm)
         {
             using (var con = new SqlConnection(Server.SqlConString))
             {
@@ -335,14 +335,6 @@ namespace TTMSWebAPI.Servers
                         Direction = ParameterDirection.Input,
                         SqlDbType = SqlDbType.Int,
                         Value = sgm.TheaterId
-                    },
-                    new SqlParameter
-                    {
-                        ParameterName = "@theaterName",
-                        Direction = ParameterDirection.Input,
-                        SqlDbType = SqlDbType.NVarChar,
-                        Size = 30,
-                        Value = sgm.TheaterName
                     },
                     new SqlParameter
                     {
@@ -399,7 +391,8 @@ namespace TTMSWebAPI.Servers
                         theaterId = (int) reader[2],
                         performance = (string) reader[3],
                         playDate = (DateTime) reader[4],
-                        price = (decimal) reader[5]
+                        price = (decimal) reader[5],
+                        theaterName = (string) reader[6]
                     });
                 }
 

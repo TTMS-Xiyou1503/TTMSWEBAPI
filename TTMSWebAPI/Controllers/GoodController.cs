@@ -224,7 +224,7 @@ namespace TTMSWebAPI.Controllers
         /// <returns>商品列表</returns>
         [HttpPatch("[action]")]
         [HttpPost("[action]")]
-        public object SelectGoodWithName([FromBody] SelectGoodWithNameModel sgm)
+        public object SelectGoodWithName([FromBody] SelectGoodModel sgm)
         {
             try
             {
