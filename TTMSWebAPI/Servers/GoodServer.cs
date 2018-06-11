@@ -410,7 +410,7 @@ namespace TTMSWebAPI.Servers
                 {
                     new SqlParameter
                     {
-                        ParameterName = "@gooodId",
+                        ParameterName = "@goodId",
                         Direction = ParameterDirection.Input,
                         SqlDbType = SqlDbType.Int,
                         Value = cm.GoodId
@@ -424,7 +424,7 @@ namespace TTMSWebAPI.Servers
                     },
                     new SqlParameter
                     {
-                        ParameterName = "@teatherId",
+                        ParameterName = "@theaterId",
                         Direction = ParameterDirection.Input,
                         SqlDbType = SqlDbType.Int,
                         Value = cm.TheaterId
@@ -441,8 +441,7 @@ namespace TTMSWebAPI.Servers
                     {
                         ParameterName = "@playDate",
                         Direction = ParameterDirection.Input,
-                        Size = 15,
-                        SqlDbType = SqlDbType.VarChar,
+                        SqlDbType = SqlDbType.Date,
                         Value = cm.PlayDate
                     },
                     new SqlParameter
