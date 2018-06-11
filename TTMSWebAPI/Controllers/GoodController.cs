@@ -218,6 +218,46 @@ namespace TTMSWebAPI.Controllers
             }
         }
 
+        /// <summary>
+        /// 筛选商品（包含影厅名称）
+        /// </summary>
+        /// <returns>商品列表</returns>
+        [HttpPatch("[action]")]
+        [HttpPost("[action]")]
+        public object SelectGoodWithName([FromBody] SelectGoodWithNameModel sgm)
+        {
+            try
+            {
+//                var addr = Server.GetUserIp(Request.HttpContext);
+//                if (Server.IpHandle(addr) == 0)
+//                {
+//                    return new[] { "your ip can't using our api , please contact administrator" };
+//                }
+//
+//                var account = HttpContext.Session.GetString("user_account");
+//
+//                if (account == null)
+//                {
+//                    return new
+//                    {
+//                        result = 401 ,
+//                        msg = "not login"
+//                    };
+//                }
+
+                var re = GoodServer.SelectGoodWithName(sgm);
+
+                return re;
+            }
+            catch (Exception e)
+            {
+                return new
+                {
+                    result = e.HResult,
+                    msg = e.Message
+                };
+            }
+        }
 
         /// <summary>
         /// 上架节目
