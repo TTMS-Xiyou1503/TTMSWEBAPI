@@ -33,16 +33,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] {"your ip can't using our api , please contact administrator"};
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var re = ProgrammeServer.GetAllProgramme();
 
@@ -73,16 +73,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] {"your ip can't using our api , please contact administrator"};
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var re = ProgrammeServer.GetAllProgrammeWithImagePath();
 
@@ -114,16 +114,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] {"your ip can't using our api , please contact administrator"};
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var re = ProgrammeServer.QueryProgramme(programmeName);
 
@@ -154,16 +154,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] {"your ip can't using our api , please contact administrator"};
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var re = ProgrammeServer.GetAllTags();
 
@@ -195,16 +195,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] {"your ip can't using our api , please contact administrator"};
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var re = ProgrammeServer.SelectPlayBill(programmeId);
 
@@ -238,16 +238,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] {"your ip can't using our api , please contact administrator"};
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var re = ProgrammeServer.QueryProgramme(programmeId);
 
@@ -279,16 +279,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] {"your ip can't using our api , please contact administrator"};
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var files = Request.Form.Files;
                 var programmeId = int.Parse(Request.Form.First(c => c.Key == "programmeId").Value);
@@ -350,16 +350,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] {"your ip can't using our api , please contact administrator"};
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var re = ProgrammeServer.SelectProgramme(tags);
 
@@ -432,16 +432,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] {"your ip can't using our api , please contact administrator"};
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var re = ProgrammeServer.CreateProgramme(cm);
 
@@ -473,16 +473,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] {"your ip can't using our api , please contact administrator"};
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var files = Request.Form.Files;
                 var programmeName = Request.Form.First(c => c.Key == "programmeName").Value;
@@ -543,16 +543,7 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] {"your ip can't using our api , please contact administrator"};
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+//             
 
                 var re = ProgrammeServer.DeleteProgramme(id);
 

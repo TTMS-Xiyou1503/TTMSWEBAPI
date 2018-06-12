@@ -37,8 +37,6 @@ namespace TTMSWebAPI.Controllers
                 HttpContext.Session.Remove("user_verCode");
                 HttpContext.Session.SetString("user_verCode", verCode.code);
 
-                Console.WriteLine(HttpContext.Session.GetString("user_verCode"));
-
                 return verCode;
             }
             catch (Exception)

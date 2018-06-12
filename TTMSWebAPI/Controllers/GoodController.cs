@@ -29,16 +29,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] { "your ip can't using our api , please contact administrator" };
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var re = GoodServer.GetAllGood();
 
@@ -69,16 +69,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] { "your ip can't using our api , please contact administrator" };
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var re = GoodServer.GetAllGoodWithName();
 
@@ -110,16 +110,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] { "your ip can't using our api , please contact administrator" };
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var re = GoodServer.QueryGood(goodId);
 
@@ -152,16 +152,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] { "your ip can't using our api , please contact administrator" };
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401 ,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401 ,
+                        msg = "not login"
+                    };
+                }
 
                 var re = GoodServer.UpdateGood(cm);
 
@@ -193,16 +193,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] { "your ip can't using our api , please contact administrator" };
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401 ,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401 ,
+                        msg = "not login"
+                    };
+                }
 
                 var re = GoodServer.SelectGood(sgm);
 
@@ -234,16 +234,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] { "your ip can't using our api , please contact administrator" };
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401 ,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401 ,
+                        msg = "not login"
+                    };
+                }
 
                 var re = GoodServer.SelectGoodWithName(sgm);
 
@@ -275,16 +275,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] { "your ip can't using our api , please contact administrator" };
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var re = GoodServer.CreateGood(cm);
 
@@ -316,16 +316,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] { "your ip can't using our api , please contact administrator" };
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var re = GoodServer.DeleteGood(id);
 

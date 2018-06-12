@@ -29,16 +29,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] { "your ip can't using our api , please contact administrator" };
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var re = TicketServer.QueryTicket(id);
 
@@ -70,16 +70,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] { "your ip can't using our api , please contact administrator" };
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var re = TicketServer.SelectTicket(goodId);
 
@@ -111,16 +111,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] { "your ip can't using our api , please contact administrator" };
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var re = TicketServer.SellTicket(ticketId);
 
@@ -153,16 +153,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] { "your ip can't using our api , please contact administrator" };
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var re = TicketServer.PayTicket(ticketId, userId);
 
@@ -195,16 +195,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] { "your ip can't using our api , please contact administrator" };
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var re = TicketServer.ReturnedTicket(ticketId, userId);
 

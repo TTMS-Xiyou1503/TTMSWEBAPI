@@ -29,16 +29,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] { "your ip can't using our api , please contact administrator" };
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401 ,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401 ,
+                        msg = "not login"
+                    };
+                }
                 
                 var re = SeatServer.GetAllSeat();
 
@@ -70,17 +70,17 @@ namespace TTMSWebAPI.Controllers
 //                {
 //                    return new[] { "your ip can't using our api , please contact administrator" };
 //                }
-//
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401 ,
-//                        msg = "not login"
-//                    };
-//                }
+
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401 ,
+                        msg = "not login"
+                    };
+                }
                 
                 var re = SeatServer.SelectSeat(theaterId);
 
@@ -113,16 +113,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] { "your ip can't using our api , please contact administrator" };
 //                }
 //                
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401 ,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401 ,
+                        msg = "not login"
+                    };
+                }
 
                 var re = SeatServer.QuerySeat(seatId);
 
@@ -156,16 +156,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] { "your ip can't using our api , please contact administrator" };
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401 ,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401 ,
+                        msg = "not login"
+                    };
+                }
                 
                 var re = SeatServer.UpdateSeatStatus(um);
 
@@ -198,16 +198,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] { "your ip can't using our api , please contact administrator" };
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401 ,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401 ,
+                        msg = "not login"
+                    };
+                }
                 
                 var re = SeatServer.CreateSeat(cm);
 
@@ -240,16 +240,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] { "your ip can't using our api , please contact administrator" };
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401 ,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401 ,
+                        msg = "not login"
+                    };
+                }
                 
                 var re = SeatServer.DeleteSeat(id);
 
