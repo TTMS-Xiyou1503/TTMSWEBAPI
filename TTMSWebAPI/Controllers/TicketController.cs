@@ -137,6 +137,48 @@ namespace TTMSWebAPI.Controllers
         }
 
         /// <summary>
+        /// 订票(参数有票id与用户id)
+        /// </summary>
+        /// <param name="ticketId">票Id</param>
+        /// <param name="userId">用户Id</param>
+        /// <returns></returns>
+        [HttpPost("[action]/{ticketId}&{userId}")]
+        public object NewSellTicket(int ticketId,int userId)
+        {
+            try
+            {
+//                var addr = Server.GetUserIp(Request.HttpContext);
+//                if (Server.IpHandle(addr) == 0)
+//                {
+//                    return new[] { "your ip can't using our api , please contact administrator" };
+//                }
+//
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
+
+                var re = TicketServer.NewSellTicket(ticketId,userId);
+
+                return re;
+            }
+            catch (Exception e)
+            {
+                return new
+                {
+                    result = e.HResult,
+                    msg = e.Message
+                };
+            }
+        }
+        
+        /// <summary>
         /// 支付
         /// </summary>
         /// <param name="ticketId">票Id</param>

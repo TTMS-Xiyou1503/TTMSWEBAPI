@@ -61,6 +61,63 @@ namespace TTMSWebAPI.Servers
         }
 
         /// <summary>
+        /// 售票(包含票id与用户id)
+        /// </summary>
+        /// <param name="ticketId">票ID</param>
+        /// <returns>售票结果</returns>
+        public static object NewSellTicket(int ticketId,int userId)
+        {
+            using (var con = new SqlConnection(Server.SqlConString))
+            {
+                con.Open();
+
+                var sqlCom = new SqlCommand("sp_NewSellTicket", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                sqlCom.Parameters.AddRange(new[]
+                {
+                    new SqlParameter
+                    {
+                        ParameterName = "@ticketId",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.Int,
+                        Value = ticketId
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@userId",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.Int,
+                        Value = userId
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@message",
+                        Direction = ParameterDirection.Output,
+                        Size = 30,
+                        SqlDbType = SqlDbType.VarChar
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@return",
+                        Direction = ParameterDirection.ReturnValue,
+                        SqlDbType = SqlDbType.Int
+                    }
+                });
+
+                sqlCom.ExecuteNonQuery();
+
+                return new
+                {
+                    result = (int)sqlCom.Parameters["@return"].Value,
+                    msg = (string)sqlCom.Parameters["@message"].Value
+                };
+            }
+        }
+        
+        /// <summary>
         /// 退票
         /// </summary>
         /// <param name="ticketId">票ID</param>

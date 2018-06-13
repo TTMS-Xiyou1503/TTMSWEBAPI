@@ -543,7 +543,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] {"your ip can't using our api , please contact administrator"};
 //                }
 //
-//             
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var re = ProgrammeServer.DeleteProgramme(id);
 

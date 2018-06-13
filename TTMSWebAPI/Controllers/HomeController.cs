@@ -33,7 +33,6 @@ namespace TTMSWebAPI.Controllers
             try
             {
                 var verCode = Server.VerCode();
-
                 HttpContext.Session.Remove("user_verCode");
                 HttpContext.Session.SetString("user_verCode", verCode.code);
 
