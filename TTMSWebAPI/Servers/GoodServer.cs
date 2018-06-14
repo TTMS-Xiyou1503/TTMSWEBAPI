@@ -76,6 +76,7 @@ namespace TTMSWebAPI.Servers
             }
         }
 
+        
         /// <summary>
         /// 获得所有上架商品(包含影厅名称和剧目名称)
         /// </summary>
@@ -392,7 +393,11 @@ namespace TTMSWebAPI.Servers
                         performance = (string) reader[3],
                         playDate = (DateTime) reader[4],
                         price = (decimal) reader[5],
-                        theaterName = (string) reader[6]
+                        theaterName = (string) reader[6],
+                        programmeImagePath = (string) reader[7],
+                        programmeName = (string) reader[8],
+                        duration = (int) reader[9]
+                        
                     });
                 }
 

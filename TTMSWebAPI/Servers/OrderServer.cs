@@ -76,6 +76,85 @@ namespace TTMSWebAPI.Servers
             }
         }
 
+        ///<summary>
+        /// 获取未支付订单
+        /// </summary>
+        /// <param name="userId">用户ID</param>
+        /// <returns>获取数据</returns>
+        public static object SelectUnPaidOrder(int userId)
+        {
+            using (var con = new SqlConnection(Server.SqlConString))
+            {
+                con.Open();
+
+                var message = "";
+
+                var sqlCom = new SqlCommand("sp_SelectUnPaidOrder", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                sqlCom.Parameters.AddRange(new[]
+                {
+                    new SqlParameter
+                    {
+                        ParameterName = "@userId",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.Int,
+                        Value = userId
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@message",
+                        Direction = ParameterDirection.Output,
+                        Size = 30,
+                        SqlDbType = SqlDbType.VarChar,
+                        Value = message
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@return",
+                        Direction = ParameterDirection.ReturnValue,
+                        SqlDbType = SqlDbType.Int
+                    }
+                });
+
+                sqlCom.ExecuteNonQuery();
+
+                var msg = (string) sqlCom.Parameters["@message"].Value;
+
+                var data = new List<object>();
+
+                var reader = sqlCom.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    data.Add(new
+                    {
+                        Id = (int)reader[0],
+                        Name = (string)reader[1],
+                        Duration = (int)reader[2],
+                        Tage = (string)reader[3],
+                        Profile = (string)reader[4],
+                        Performance = (string)reader[5],
+                        Date = (DateTime)reader[6],
+                        Price = (decimal)reader[7],
+                        TheaterName = (string)reader[8],
+                        SeatRowNumber = (int)reader[9],
+                        SeatColNumber = (int)reader[10],    
+                    });
+                }
+
+                return new
+                {
+                    result = (int) sqlCom.Parameters["@return"].Value,
+                    msg,
+                    data
+                };
+            }
+        }
+        
+        
         /// <summary>
         /// 筛选订单
         /// </summary>
