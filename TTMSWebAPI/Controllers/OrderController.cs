@@ -23,11 +23,11 @@ namespace TTMSWebAPI.Controllers
         {
             try
             {
-                var addr = Server.GetUserIp(Request.HttpContext);
-                if (Server.IpHandle(addr) == 0)
-                {
-                    return new[] { "your ip can't using our api , please contact administrator" };
-                }
+//                var addr = Server.GetUserIp(Request.HttpContext);
+//                if (Server.IpHandle(addr) == 0)
+//                {
+//                    return new[] { "your ip can't using our api , please contact administrator" };
+//                }
                 
                 var account = HttpContext.Session.GetString("user_account");
 
@@ -54,6 +54,47 @@ namespace TTMSWebAPI.Controllers
             }
         }
 
+        ///<summary>
+        /// 获取未完成订单
+        /// </summary>
+        /// <param name="userId">用户ID</param>
+        /// <returns>票务信息</returns>
+        [HttpGet("[action]/{userId}")]
+        public object SelectUnPaidOrder(int userId)
+        {
+            try
+            {
+//                var addr = Server.GetUserIp(Request.HttpContext);
+//                if (Server.IpHandle(addr) == 0)
+//                {
+//                    return new[] { "your ip can't using our api , please contact administrator" };
+//                }
+//
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
+
+                var re = OrderServer.SelectUnPaidOrder(userId);
+
+                return re;
+            }
+            catch (Exception e)
+            {
+                return new
+                {
+                    result = e.HResult,
+                    msg = e.Message
+                };
+            }
+        }
+        
         /// <summary>
         /// 筛选订单
         /// </summary>
@@ -65,11 +106,11 @@ namespace TTMSWebAPI.Controllers
         {
             try
             {
-                var addr = Server.GetUserIp(Request.HttpContext);
-                if (Server.IpHandle(addr) == 0)
-                {
-                    return new[] { "your ip can't using our api , please contact administrator" };
-                }
+//                var addr = Server.GetUserIp(Request.HttpContext);
+//                if (Server.IpHandle(addr) == 0)
+//                {
+//                    return new[] { "your ip can't using our api , please contact administrator" };
+//                }
                 
                 var account = HttpContext.Session.GetString("user_account");
 
@@ -96,6 +137,7 @@ namespace TTMSWebAPI.Controllers
             }
         }
 
+        
            
         /// <summary>
         /// 分析销售情况
@@ -114,16 +156,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] { "your ip can't using our api , please contact administrator" };
 //                }
 //                
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401 ,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401 ,
+                        msg = "not login"
+                    };
+                }
                 
                 var re = OrderServer.AnalyseOrder(am);
 

@@ -105,7 +105,7 @@ namespace TTMSWebAPI
             corsBuilder.AllowAnyMethod();
             corsBuilder.AllowAnyOrigin();
             corsBuilder.AllowCredentials();
-
+            
             services.AddCors(options => { options.AddPolicy("mCors", corsBuilder.Build()); });
         }
 

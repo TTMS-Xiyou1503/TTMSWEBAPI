@@ -62,6 +62,7 @@ namespace TTMSWebAPI.Servers
                         programmeDruation = (int) reader[2],
                         programmeTags = (string) reader[3],
                         programmeProfile = (string) reader[4]
+                        
                     });
                 }
 
@@ -73,7 +74,72 @@ namespace TTMSWebAPI.Servers
                 };
             }
         }
+        
+        /// <summary>
+        /// 获得所有剧目(附带图片路径)
+        /// </summary>
+        /// <returns>剧目列表</returns>
+        public static object GetAllProgrammeWithImagePath()
+        {
+            using (var con = new SqlConnection(Server.SqlConString))
+            {
+                con.Open();
 
+                var message = "";
+
+                var sqlCom = new SqlCommand("sp_GetAllProgrammeWithImagePath", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                sqlCom.Parameters.AddRange(new[]
+                {
+                    new SqlParameter
+                    {
+                        ParameterName = "@message",
+                        Direction = ParameterDirection.Output,
+                        Size = 30,
+                        SqlDbType = SqlDbType.VarChar,
+                        Value = message
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@return",
+                        Direction = ParameterDirection.ReturnValue,
+                        SqlDbType = SqlDbType.Int
+                    }
+                });
+
+                sqlCom.ExecuteNonQuery();
+
+                var msg = (string) sqlCom.Parameters["@message"].Value;
+
+                var data = new List<object>();
+
+                var reader = sqlCom.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    data.Add(new
+                    {
+                        programmeId = (int) reader[0],
+                        programmeName = (string) reader[1],
+                        programmeDruation = (int) reader[2],
+                        programmeTags = (string) reader[3],
+                        programmeProfile = (string) reader[4],
+                        programmeImagePath = (string) reader[5]
+                    });
+                }
+
+                return new
+                {
+                    result = (int) sqlCom.Parameters["@return"].Value,
+                    msg,
+                    data
+                };
+            }
+        }
+        
         /// <summary>
         /// 查询剧目信息
         /// </summary>
@@ -423,7 +489,94 @@ namespace TTMSWebAPI.Servers
                 };
             }
         }
+        ///<summary>
+        /// 更新剧目
+        /// </summary>
+        /// <param name="cm">更新剧目各种信息</param>
+        /// <param name="filePath">图片路径</param>
+        /// <returns>更新结果</returns>
+        public static object UpdateAndPlayBill(UpdateProgrammeModel cm,string filePath)
+        {
+            using (var con = new SqlConnection(Server.SqlConString))
+            {
+                con.Open();
+                
+                var sqlCom = new SqlCommand("sp_UpdateProgramme", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                
+                sqlCom.Parameters.AddRange(new []
+                {
+                    new SqlParameter
+                    {
+                        ParameterName = "@programmeId",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.Int,
+                        Value = cm.ProgrammeId
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@programmeName",
+                        Direction = ParameterDirection.Input,
+                        Size = 50,
+                        SqlDbType = SqlDbType.NVarChar,
+                        Value = cm.ProgrammeName
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@programmeDuration",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.Int,
+                        Value = cm.Duration
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@programmeTags",
+                        Direction = ParameterDirection.Input,
+                        Size = 20,
+                        SqlDbType = SqlDbType.NVarChar,
+                        Value = cm.Tags
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@programmeProfile",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.Text,
+                        Value = cm.Profile
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@programmeImagePath",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.VarChar,
+                        Size = 100 ,
+                        Value = filePath
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@message",
+                        Direction = ParameterDirection.Output,
+                        Size = 30,
+                        SqlDbType = SqlDbType.VarChar
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@return",
+                        Direction = ParameterDirection.ReturnValue,
+                        SqlDbType = SqlDbType.Int
+                    }
+                });
 
+                sqlCom.ExecuteNonQuery();
+
+                return new
+                {
+                    result = (int) sqlCom.Parameters["@return"].Value,
+                    msg = (string) sqlCom.Parameters["@message"].Value
+                };
+            }
+        }
         /// <summary>
         /// 根据标签筛选剧目
         /// </summary>

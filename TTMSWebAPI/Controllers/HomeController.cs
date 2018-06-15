@@ -13,15 +13,15 @@ namespace TTMSWebAPI.Controllers
     [EnableCors("mCors")]
     public class HomeController : Controller
     {
-        /// <summary>
-        /// 主页
-        /// </summary>
-        /// <returns>返回页面</returns>
-        [HttpGet]
-        public ViewResult Get()
-        {
-            return View();
-        }
+//        /// <summary>
+//        /// 主页
+//        /// </summary>
+//        /// <returns>返回页面</returns>
+//        [HttpGet]
+//        public ViewResult Get()
+//        {
+//            //return View();
+//        }
 
         /// <summary>
         /// 验证码
@@ -33,11 +33,8 @@ namespace TTMSWebAPI.Controllers
             try
             {
                 var verCode = Server.VerCode();
-
                 HttpContext.Session.Remove("user_verCode");
                 HttpContext.Session.SetString("user_verCode", verCode.code);
-
-                Console.WriteLine(HttpContext.Session.GetString("user_verCode"));
 
                 return verCode;
             }

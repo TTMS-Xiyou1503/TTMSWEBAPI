@@ -33,16 +33,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] {"your ip can't using our api , please contact administrator"};
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var re = ProgrammeServer.GetAllProgramme();
 
@@ -59,6 +59,46 @@ namespace TTMSWebAPI.Controllers
         }
 
         /// <summary>
+        /// 获得所有剧目(附加图片路径)
+        /// </summary>
+        /// <returns>所有剧目(附加图片路径)</returns>
+        [HttpGet("[action]")]
+        public object GetWithImagePath()
+        {
+            try
+            {
+//                var addr = Server.GetUserIp(Request.HttpContext);
+//                if (Server.IpHandle(addr) == 0)
+//                {
+//                    return new[] {"your ip can't using our api , please contact administrator"};
+//                }
+//
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
+
+                var re = ProgrammeServer.GetAllProgrammeWithImagePath();
+
+                return re;
+            }
+            catch (Exception e)
+            {
+                return new
+                {
+                    result = e.HResult,
+                    msg = e.Message
+                };
+            }
+        }
+        
+        /// <summary>
         /// 查询具体剧目信息
         /// </summary>
         /// <param name="programmeName">剧目名称</param>
@@ -74,16 +114,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] {"your ip can't using our api , please contact administrator"};
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var re = ProgrammeServer.QueryProgramme(programmeName);
 
@@ -114,16 +154,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] {"your ip can't using our api , please contact administrator"};
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var re = ProgrammeServer.GetAllTags();
 
@@ -155,16 +195,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] {"your ip can't using our api , please contact administrator"};
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var re = ProgrammeServer.SelectPlayBill(programmeId);
 
@@ -180,6 +220,8 @@ namespace TTMSWebAPI.Controllers
             }
         }
 
+        
+        
         /// <summary>
         /// 查询具体剧目信息
         /// </summary>
@@ -196,16 +238,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] {"your ip can't using our api , please contact administrator"};
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var re = ProgrammeServer.QueryProgramme(programmeId);
 
@@ -220,7 +262,81 @@ namespace TTMSWebAPI.Controllers
                 };
             }
         }
+        
+        /// <summary>
+        /// 更新剧目
+        /// </summary>
+        /// <param name="env">更新剧目模型</param>
+        /// <returns>更新结果</returns>
+        [HttpPost("[action]")]
+        public object UpdateProgramme([FromServices] IHostingEnvironment env)
+        {
+            try
+            {
+//                var addr = Server.GetUserIp(Request.HttpContext);
+//                if (Server.IpHandle(addr) == 0)
+//                {
+//                    return new[] {"your ip can't using our api , please contact administrator"};
+//                }
+//
+                var account = HttpContext.Session.GetString("user_account");
 
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
+
+                
+                var programmeId = int.Parse(Request.Form.First(c => c.Key == "programmeId").Value);
+                var programmeName = Request.Form.First(c => c.Key == "programmeName").Value;
+                var duration = int.Parse(Request.Form.First(c => c.Key == "duration").Value);
+                var profile = Request.Form.First(c => c.Key == "profile").Value;
+                var tags = Request.Form.First(c => c.Key == "tags").Value;
+                var fileName = "";
+                var files = Request.Form.Files;
+                if (files.Count != 0)
+                {
+                    var file = files[0];
+                    fileName = DateTime.Now.Ticks + ContentDispositionHeaderValue
+                                       .Parse(file.ContentDisposition)
+                                       .FileName
+                                       .Trim().Value;
+                    //var imagePath = env.WebRootPath + @"./PlayBill/" +  DateTime.Now.Ticks + $@"{fileName}"; // in unix
+                    var imagePath = @"C:\\PlayBill\" + $@"{fileName}";
+                    using (var fs = System.IO.File.Create(imagePath))
+                    {
+                        file.CopyTo(fs);
+                        fs.Flush();
+                    }
+                }
+
+                var cm = new UpdateProgrammeModel
+                {
+                    ProgrammeId = programmeId,
+                    ProgrammeName = programmeName,
+                    Duration = duration,
+                    Profile = profile,
+                    Tags = tags
+                };   
+
+                var re = ProgrammeServer.UpdateAndPlayBill(cm, fileName);
+
+                return re;
+            }
+            catch (Exception e)
+            {
+                return new
+                {
+                    result = e.HResult,
+                    msg = e.Message
+                };
+            }
+        }
+        
         /// <summary>
         /// 使用剧目标签筛选剧目
         /// </summary>
@@ -237,16 +353,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] {"your ip can't using our api , please contact administrator"};
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var re = ProgrammeServer.SelectProgramme(tags);
 
@@ -279,7 +395,7 @@ namespace TTMSWebAPI.Controllers
                                    .FileName
                                    .Trim().Value;
                 //var filePath = env.WebRootPath + @"./PlayBill/" +  DateTime.Now.Ticks + $@"{fileName}"; // in unix
-                var filePath = env.WebRootPath + @".\PlayBill\" + $@"{fileName}"; // in windows
+                var filePath = @"C:\\PlayBill\" + $@"{fileName}"; // in windows
 
                 using (var fs = System.IO.File.Create(filePath))
                 {
@@ -319,16 +435,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] {"your ip can't using our api , please contact administrator"};
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var re = ProgrammeServer.CreateProgramme(cm);
 
@@ -360,16 +476,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] {"your ip can't using our api , please contact administrator"};
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var files = Request.Form.Files;
                 var programmeName = Request.Form.First(c => c.Key == "programmeName").Value;
@@ -383,7 +499,7 @@ namespace TTMSWebAPI.Controllers
                                    .FileName
                                    .Trim().Value;
                 //var imagePath = env.WebRootPath + @"./PlayBill/" +  DateTime.Now.Ticks + $@"{fileName}"; // in unix
-                var imagePath = env.WebRootPath + @".\PlayBill\" + $@"{fileName}"; // in windows
+                var imagePath = @"C:\\PlayBill\" + $@"{fileName}"; // in windows
 
                 var cm = new CreateProgrammeModel
                 {
@@ -399,7 +515,7 @@ namespace TTMSWebAPI.Controllers
                     fs.Flush();
                 }
 
-                var re = ProgrammeServer.CreateProgrammeAndPlayBill(cm, imagePath);
+                var re = ProgrammeServer.CreateProgrammeAndPlayBill(cm, fileName);
 
                 return re;
             }
@@ -430,16 +546,16 @@ namespace TTMSWebAPI.Controllers
 //                    return new[] {"your ip can't using our api , please contact administrator"};
 //                }
 //
-//                var account = HttpContext.Session.GetString("user_account");
-//
-//                if (account == null)
-//                {
-//                    return new
-//                    {
-//                        result = 401,
-//                        msg = "not login"
-//                    };
-//                }
+                var account = HttpContext.Session.GetString("user_account");
+
+                if (account == null)
+                {
+                    return new
+                    {
+                        result = 401,
+                        msg = "not login"
+                    };
+                }
 
                 var re = ProgrammeServer.DeleteProgramme(id);
 

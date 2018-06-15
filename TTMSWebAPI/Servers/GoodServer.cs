@@ -76,6 +76,74 @@ namespace TTMSWebAPI.Servers
             }
         }
 
+        
+        /// <summary>
+        /// 获得所有上架商品(包含影厅名称和剧目名称)
+        /// </summary>
+        /// <returns></returns>
+        public static object GetAllGoodWithName()
+        {
+            using (var con = new SqlConnection(Server.SqlConString))
+            {
+                con.Open();
+
+                var message = "";
+
+                var sqlCom = new SqlCommand("sp_GetAllGoodWithName", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                sqlCom.Parameters.AddRange(new[]
+                {
+                    new SqlParameter
+                    {
+                        ParameterName = "@message",
+                        Direction = ParameterDirection.Output,
+                        Size = 30,
+                        SqlDbType = SqlDbType.VarChar,
+                        Value = message
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@return",
+                        Direction = ParameterDirection.ReturnValue,
+                        SqlDbType = SqlDbType.Int
+                    }
+                });
+
+                sqlCom.ExecuteNonQuery();
+
+                var msg = (string) sqlCom.Parameters["@message"].Value;
+
+                var data = new List<object>();
+
+                var reader = sqlCom.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    data.Add(new
+                    {
+                        goodId = (int) reader[0],
+                        programmeId = (int) reader[1],
+                        theaterId = (int) reader[2],
+                        performance = (string) reader[3],
+                        playDate = (DateTime) reader[4],
+                        price = (decimal) reader[5],
+                        threateName = (string) reader[6],
+                        programme = (string) reader[7]
+                    });
+                }
+
+                return new
+                {
+                    result = (int) sqlCom.Parameters["@return"].Value,
+                    msg,
+                    data
+                };
+            }
+        }
+        
         /// <summary>
         /// 查询上架商品
         /// </summary>
@@ -242,6 +310,105 @@ namespace TTMSWebAPI.Servers
                 };
             }
         }
+        
+        /// <summary>
+        /// 筛选上架商品(包含影厅名称)
+        /// </summary>
+        /// <returns></returns>
+        public static object SelectGoodWithName(SelectGoodModel sgm)
+        {
+            using (var con = new SqlConnection(Server.SqlConString))
+            {
+                con.Open();
+
+                var message = "";
+
+                var sqlCom = new SqlCommand("sp_SelectGoodWithName", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                sqlCom.Parameters.AddRange(new[]
+                {
+                    new SqlParameter
+                    {
+                        ParameterName = "@theaterId",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.Int,
+                        Value = sgm.TheaterId
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@programmeId",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.Int,
+                        Value = sgm.ProgrammeId
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@playDate",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.Date,
+                        Value = sgm.PlayDate
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@performance",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.NVarChar,
+                        Size = 10,
+                        Value = sgm.Performance
+                    },       
+                    new SqlParameter
+                    {
+                        ParameterName = "@message",
+                        Direction = ParameterDirection.Output,
+                        Size = 30,
+                        SqlDbType = SqlDbType.VarChar,
+                        Value = message
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@return",
+                        Direction = ParameterDirection.ReturnValue,
+                        SqlDbType = SqlDbType.Int
+                    }
+                });
+
+                sqlCom.ExecuteNonQuery();
+
+                var msg = (string) sqlCom.Parameters["@message"].Value;
+
+                var data = new List<object>();
+
+                var reader = sqlCom.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    data.Add(new
+                    {
+                        goodId = (int) reader[0],
+                        programmeId = (int) reader[1],
+                        theaterId = (int) reader[2],
+                        performance = (string) reader[3],
+                        playDate = (DateTime) reader[4],
+                        price = (decimal) reader[5],
+                        theaterName = (string) reader[6],
+                        programmeImagePath = (string) reader[7],
+                        programmeName = (string) reader[8],
+                        duration = (int) reader[9]
+                        
+                    });
+                }
+
+                return new
+                {
+                    result = (int) sqlCom.Parameters["@return"].Value,
+                    msg,
+                    data
+                };
+            }
+        }
 
         /// <summary>
         /// 上架商品
@@ -322,6 +489,93 @@ namespace TTMSWebAPI.Servers
             }
         }
 
+        ///<summary>
+        /// 更新演出计划
+        /// </summary>
+        /// <param name="cm">更新演出计划模型</param>
+        
+        /// <returns>更新结果</returns>
+        public static object UpdateGood(UpdateGoodModel cm)
+        {
+            using (var con = new SqlConnection(Server.SqlConString))
+            {
+                con.Open();
+                
+                var sqlCom = new SqlCommand("sp_UpdateGood", con)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                
+                sqlCom.Parameters.AddRange(new []
+                {
+                    new SqlParameter
+                    {
+                        ParameterName = "@goodId",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.Int,
+                        Value = cm.GoodId
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@programmeId",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.Int,
+                        Value = cm.ProgrammeId
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@theaterId",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.Int,
+                        Value = cm.TheaterId
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@performance",
+                        Direction = ParameterDirection.Input,
+                        Size = 10,
+                        SqlDbType = SqlDbType.VarChar,
+                        Value = cm.Performance
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@playDate",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.Date,
+                        Value = cm.PlayDate
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@price",
+                        Direction = ParameterDirection.Input,
+                        SqlDbType = SqlDbType.Int,
+                        Value = cm.Price
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@message",
+                        Direction = ParameterDirection.Output,
+                        Size = 30,
+                        SqlDbType = SqlDbType.VarChar
+                    },
+                    new SqlParameter
+                    {
+                        ParameterName = "@return",
+                        Direction = ParameterDirection.ReturnValue,
+                        SqlDbType = SqlDbType.Int
+                    }
+                });
+
+                sqlCom.ExecuteNonQuery();
+
+                return new
+                {
+                    result = (int) sqlCom.Parameters["@return"].Value,
+                    msg = (string) sqlCom.Parameters["@message"].Value
+                };
+            }
+        }
+        
         /// <summary>
         /// 下架商品
         /// </summary>
