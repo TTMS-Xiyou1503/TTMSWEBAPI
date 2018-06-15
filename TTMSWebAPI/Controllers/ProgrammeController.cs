@@ -290,20 +290,29 @@ namespace TTMSWebAPI.Controllers
                     };
                 }
 
-                var files = Request.Form.Files;
+                
                 var programmeId = int.Parse(Request.Form.First(c => c.Key == "programmeId").Value);
                 var programmeName = Request.Form.First(c => c.Key == "programmeName").Value;
                 var duration = int.Parse(Request.Form.First(c => c.Key == "duration").Value);
                 var profile = Request.Form.First(c => c.Key == "profile").Value;
                 var tags = Request.Form.First(c => c.Key == "tags").Value;
-
-                var file = files[0];
-                var fileName = DateTime.Now.Ticks + ContentDispositionHeaderValue
-                                   .Parse(file.ContentDisposition)
-                                   .FileName
-                                   .Trim().Value;
-                //var imagePath = env.WebRootPath + @"./PlayBill/" +  DateTime.Now.Ticks + $@"{fileName}"; // in unix
-                var imagePath = @"C:\\PlayBill\" + $@"{fileName}"; // in windows
+                var fileName = "";
+                var files = Request.Form.Files;
+                if (files.Count != 0)
+                {
+                    var file = files[0];
+                    fileName = DateTime.Now.Ticks + ContentDispositionHeaderValue
+                                       .Parse(file.ContentDisposition)
+                                       .FileName
+                                       .Trim().Value;
+                    //var imagePath = env.WebRootPath + @"./PlayBill/" +  DateTime.Now.Ticks + $@"{fileName}"; // in unix
+                    var imagePath = @"C:\\PlayBill\" + $@"{fileName}";
+                    using (var fs = System.IO.File.Create(imagePath))
+                    {
+                        file.CopyTo(fs);
+                        fs.Flush();
+                    }
+                }
 
                 var cm = new UpdateProgrammeModel
                 {
@@ -312,13 +321,7 @@ namespace TTMSWebAPI.Controllers
                     Duration = duration,
                     Profile = profile,
                     Tags = tags
-                };
-
-                using (var fs = System.IO.File.Create(imagePath))
-                {
-                    file.CopyTo(fs);
-                    fs.Flush();
-                }
+                };   
 
                 var re = ProgrammeServer.UpdateAndPlayBill(cm, fileName);
 

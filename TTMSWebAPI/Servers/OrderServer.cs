@@ -236,7 +236,13 @@ namespace TTMSWebAPI.Servers
                         userId = (int) reader[2],
                         type = (int) reader[3],
                         dateTime = (DateTime) reader[4],
-                        theaterId = (int) reader[5]
+                        theaterId = (int) reader[5],
+                        programmeName = (string) reader[6],
+                        theaterName = (string) reader[7],
+                        price = (Decimal) reader[8],
+                        rowNumber = (int) reader[9],
+                        colNumber = (int) reader[10],
+                        userName = (string) reader[11]
                     });
                 }
 

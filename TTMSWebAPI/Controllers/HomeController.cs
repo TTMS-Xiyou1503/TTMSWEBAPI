@@ -13,15 +13,15 @@ namespace TTMSWebAPI.Controllers
     [EnableCors("mCors")]
     public class HomeController : Controller
     {
-        /// <summary>
-        /// 主页
-        /// </summary>
-        /// <returns>返回页面</returns>
-        [HttpGet]
-        public ViewResult Get()
-        {
-            return View();
-        }
+//        /// <summary>
+//        /// 主页
+//        /// </summary>
+//        /// <returns>返回页面</returns>
+//        [HttpGet]
+//        public ViewResult Get()
+//        {
+//            //return View();
+//        }
 
         /// <summary>
         /// 验证码
